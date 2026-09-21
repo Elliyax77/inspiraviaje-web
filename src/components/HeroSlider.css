@@ -1,0 +1,235 @@
+.hero-slider-section {
+  padding: 1rem 0 2rem;
+  background-color: var(--color-bg);
+}
+
+@media (min-width: 768px) {
+  .hero-slider-section {
+    padding: 1.5rem 0 3rem;
+  }
+}
+
+/* Proporción 16:9 obligatoria */
+.slider-ratio-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: #0F172A;
+  box-shadow: 0 10px 30px -5px rgba(0, 158, 227, 0.15), 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+@media (min-width: 768px) {
+  .slider-ratio-wrapper {
+    border-radius: var(--radius-lg);
+  }
+}
+
+.slide-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.slide-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Degradado para que las letras y botones resalten */
+.slide-overlay-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.88) 0%,
+    rgba(15, 23, 42, 0.45) 45%,
+    rgba(15, 23, 42, 0.1) 80%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Parte inferior izquierda */
+.slide-caption-bottom-left {
+  position: relative;
+  z-index: 2;
+  padding: 1rem 1.25rem;
+  max-width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+@media (min-width: 640px) {
+  .slide-caption-bottom-left {
+    padding: 2rem 2.5rem;
+    max-width: 70%;
+    gap: 0.6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slide-caption-bottom-left {
+    padding: 3rem 3.5rem;
+    max-width: 60%;
+  }
+}
+
+.slide-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #0F172A;
+  background-color: var(--color-yellow);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 640px) {
+  .slide-badge {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.85rem;
+  }
+}
+
+.slide-title {
+  color: #FFFFFF;
+  font-size: clamp(1.1rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  line-height: 1.15;
+}
+
+.slide-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(0.75rem, 1.6vw, 1.1rem);
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 480px) {
+  .slide-subtitle {
+    display: none; /* Ocultar en móviles ultra pequeños para dar espacio al botón */
+  }
+  .slide-caption-bottom-left {
+    padding: 0.8rem 1rem;
+    gap: 0.4rem;
+  }
+}
+
+.slider-btn {
+  margin-top: 0.4rem;
+}
+
+@media (min-width: 640px) {
+  .slider-btn {
+    margin-top: 0.6rem;
+  }
+}
+
+.btn-arrow-icon {
+  transition: transform 0.2s ease;
+}
+
+.btn-more-info:hover .btn-arrow-icon {
+  transform: translateX(3px);
+}
+
+/* Flechas de navegación */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: var(--color-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s ease;
+  opacity: 0;
+}
+
+.slider-ratio-wrapper:hover .slider-arrow {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .slider-arrow {
+    display: none; /* En móvil se usa swipe táctil */
+  }
+}
+
+.arrow-prev {
+  left: 15px;
+}
+
+.arrow-next {
+  right: 15px;
+}
+
+.slider-arrow:hover {
+  background-color: #FFFFFF;
+  color: var(--color-yellow);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Indicadores de puntos */
+.slider-dots {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+@media (max-width: 480px) {
+  .slider-dots {
+    bottom: 10px;
+    right: 12px;
+    gap: 6px;
+  }
+}
+
+.dot-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.45);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dot-indicator.active {
+  width: 24px;
+  background-color: var(--color-yellow);
+  box-shadow: 0 0 10px rgba(255, 184, 0, 0.8);
+}
