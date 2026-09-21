@@ -10,6 +10,9 @@ Sitio web oficial de **InspiraViaje**, una agencia de viajes especializada en ex
 
 La plataforma está diseñada con una filosofía **Mobile-First** orientada a que los usuarios que navegan desde sus teléfonos celulares puedan explorar rápidamente paquetes turísticos y contactar a asesores por WhatsApp en un solo clic.
 
+- **Repositorio oficial en GitHub:** [https://github.com/Elliyax77/inspiraviaje-web](https://github.com/Elliyax77/inspiraviaje-web)
+- **Rama principal:** `main`
+
 ---
 
 ## Stack tecnológico
