@@ -3,7 +3,7 @@ import { PhoneCall, MessageCircle } from 'lucide-react';
 import { agencyInfo } from '../data/travelData';
 import './Header.css';
 
-const Header = ({ onOpenContact }) => {
+const Header = ({ onOpenContact, onOpenMenu }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const Header = ({ onOpenContact }) => {
           <img src="/logo.png?v=2" alt="InspiraViaje Logo" className="logo-image" />
         </a>
 
-        {/* Contacto a la derecha */}
+        {/* Acciones a la derecha: Contacto + 3 rayitas (Menú) */}
         <div className="header-actions">
           <button 
             type="button" 
@@ -34,6 +34,19 @@ const Header = ({ onOpenContact }) => {
             <MessageCircle size={18} className="contact-icon-mobile" />
             <PhoneCall size={17} className="contact-icon-desktop" />
             <span className="contact-label">Contacto</span>
+          </button>
+
+          {/* Botón 3 rayitas (Menú hamburguesa) */}
+          <button 
+            type="button" 
+            onClick={onOpenMenu}
+            className="btn-menu-hamburger"
+            aria-label="Abrir menú de opciones"
+            title="Menú"
+          >
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
           </button>
         </div>
 

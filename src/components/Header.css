@@ -70,6 +70,12 @@
   }
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .btn-contact-header {
   display: inline-flex;
   align-items: center;
@@ -84,6 +90,7 @@
   border-radius: var(--radius-full);
   box-shadow: 0 4px 14px rgba(0, 158, 227, 0.3);
   transition: all 0.25s ease;
+  white-space: nowrap;
 }
 
 .btn-contact-header:hover {
@@ -104,9 +111,56 @@
   display: none;
 }
 
+/* Botón 3 Rayitas (Menú Hamburguesa) */
+.btn-menu-hamburger {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background-color: #FFFFFF;
+  border: 1.5px solid rgba(0, 158, 227, 0.3);
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(0, 158, 227, 0.08);
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.hamburger-line {
+  display: block;
+  width: 20px;
+  height: 2.5px;
+  background-color: #0F172A;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.btn-menu-hamburger:hover {
+  background-color: rgba(0, 158, 227, 0.06);
+  border-color: var(--color-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 158, 227, 0.18);
+}
+
+.btn-menu-hamburger:hover .hamburger-line {
+  background-color: var(--color-blue);
+}
+
+.btn-menu-hamburger:active {
+  transform: translateY(0) scale(0.96);
+}
+
 @media (max-width: 480px) {
+  .header-actions {
+    gap: 8px;
+  }
+
   .btn-contact-header {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.9rem;
     font-size: 0.85rem;
   }
   
@@ -116,5 +170,17 @@
   
   .contact-icon-mobile {
     display: block;
+  }
+
+  .btn-menu-hamburger {
+    width: 40px;
+    height: 40px;
+    gap: 4px;
+    border-radius: 10px;
+  }
+
+  .hamburger-line {
+    width: 17px;
+    height: 2px;
   }
 }

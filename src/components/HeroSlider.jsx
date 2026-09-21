@@ -94,7 +94,7 @@ const HeroSlider = ({ onSelectSlide }) => {
   };
 
   return (
-    <section className="hero-slider-section">
+    <section className="hero-slider-section" id="promociones">
       <div className="container">
         
         {/* Contenedor estricto en proporción 16:9 */}

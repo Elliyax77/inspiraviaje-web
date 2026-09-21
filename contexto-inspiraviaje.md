@@ -41,11 +41,13 @@ inspiraviaje-web/
 │   ├── App.css              ← Estilos del contenedor general
 │   ├── index.css            ← Variables globales, fuentes Google, utilidades
 │   ├── data/
-│   │   └── travelData.js    ← Base de datos local de slides y paquetes turísticos
+│   │   └── travelData.js    ← Base de datos local (slides, paquetes, full days, métodos de pago, quiénes somos, FAQ)
 │   └── components/
-│       ├── Header.jsx / .css        ← Encabezado con logo y botón de contacto
-│       ├── HeroSlider.jsx / .css    ← Slider 16:9 con autoplay, swipe y botón "Más información"
-│       ├── Packages.jsx / .css      ← Cuadrícula de Paquetes en proporción 3:4 con botón "Más información"
+│       ├── Header.jsx / .css        ← Encabezado con logo grande, botón de contacto y botón de 3 rayitas (Menú)
+│       ├── NavDrawer.jsx / .css     ← Panel lateral desplegable con las 6 opciones de navegación
+│       ├── NavModals.jsx / .css     ← Modales detallados para Información, Full Days, Quiénes Somos y Métodos de Pago
+│       ├── HeroSlider.jsx / .css    ← Slider 16:9 con autoplay, swipe y botón "Más información" (id="promociones")
+│       ├── Packages.jsx / .css      ← Cuadrícula de Paquetes en proporción 3:4 con botón "Más información" (id="paquetes")
 │       ├── ContactModal.jsx / .css  ← Modal interactivo para contacto inmediato por WhatsApp
 │       └── Footer.jsx / .css        ← Pie de página con redes, información y soporte
 └── contexto-inspiraviaje.md         ← Documento de contexto y reglas del proyecto
@@ -53,11 +55,20 @@ inspiraviaje-web/
 
 ---
 
-## Secciones de la Web (en orden)
-1. **Header:** Logotipo oficial de InspiraViaje a la izquierda; botón de **Contacto** directo a la derecha.
-2. **Hero Slider (16:9):** Carrusel dinámico de proporción panorámica 16:9 con 3 destinos estelares que rotan hacia la derecha automáticamente y por interacción táctil. Cada slide incluye en la esquina inferior izquierda su botón **"Más información"**.
-3. **Paquetes Turísticos (3:4):** Sección destacada con 3 tarjetas en formato vertical 3:4 (ideal para visualización en teléfonos móviles) con fotos espectaculares, precio referencial, detalles y su botón **"Más información"** en la parte inferior izquierda.
-4. **Footer:** Canales de atención (WhatsApp, teléfono, correo), redes sociales y derechos reservados.
+## Secciones y Elementos de la Web (en orden)
+1. **Header:** 
+   - Logotipo oficial de InspiraViaje a la izquierda (dimensiones optimizadas para alta legibilidad).
+   - A la derecha: Botón de **Contacto** directo + **Botón de 3 rayitas (Menú)**.
+2. **Menú de 3 rayitas (Desplegable lateral):**
+   - **1. Información:** Guía en 3 pasos para reservar y preguntas frecuentes (FAQ).
+   - **2. Paquetes:** Desplazamiento fluido a la sección de paquetes turísticos (3:4).
+   - **3. Full Days:** Tours de 1 día (Morrocoy Cayo Sombrero, Isla Larga, Colonia Tovar) con precios, inclusiones y reserva inmediata.
+   - **4. Promociones:** Desplazamiento fluido al slider de promociones principales.
+   - **5. Quiénes Somos:** Respaldo, trayectoria de más de 5 años, valores y asesoría personalizada.
+   - **6. Métodos de Pago:** Zelle, Pago Móvil (tasa BCV), Efectivo USD, Binance Pay (USDT), Tarjetas Internacionales y Plan de Reserva en Cuotas (desde 30% inicial).
+3. **Hero Slider (16:9):** Carrusel dinámico de proporción panorámica 16:9 con 3 destinos estelares que rotan hacia la derecha automáticamente y por interacción táctil. Cada slide incluye en la esquina inferior izquierda su botón **"Más información"**.
+4. **Paquetes Turísticos (3:4):** Sección destacada con 3 tarjetas en formato vertical 3:4 (ideal para visualización en teléfonos móviles) con fotos espectaculares, precio referencial, detalles y su botón **"Más información"** en la parte inferior izquierda.
+5. **Footer:** Canales de atención (WhatsApp, teléfono, correo), redes sociales y derechos reservados.
 
 ---
 
