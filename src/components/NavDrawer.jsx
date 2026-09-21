@@ -8,12 +8,8 @@ import {
   Sparkles, 
   Users, 
   CreditCard, 
-  ChevronRight, 
-  MessageCircle,
-  PhoneCall,
-  MapPin
+  ChevronRight 
 } from 'lucide-react';
-import { agencyInfo } from '../data/travelData';
 import './NavDrawer.css';
 
 const menuItems = [
@@ -79,11 +75,6 @@ const NavDrawer = ({ isOpen, onClose, onSelectMenuItem }) => {
     setTimeout(() => {
       onSelectMenuItem(id);
     }, 150);
-  };
-
-  const openWhatsApp = () => {
-    const text = encodeURIComponent("¡Hola InspiraViaje! Me gustaría información general sobre sus servicios y destinos.");
-    window.open(`https://wa.me/${agencyInfo.whatsappNumber}?text=${text}`, '_blank');
   };
 
   return (
@@ -158,28 +149,6 @@ const NavDrawer = ({ isOpen, onClose, onSelectMenuItem }) => {
                 })}
               </nav>
             </div>
-
-            {/* Pie del Drawer con contacto directo por WhatsApp */}
-            <div className="nav-drawer-footer">
-              <div className="nav-footer-support">
-                <div className="nav-support-title">¿Dudas o necesitas cotización inmediata?</div>
-                <button 
-                  type="button" 
-                  onClick={openWhatsApp}
-                  className="btn-drawer-whatsapp"
-                >
-                  <MessageCircle size={18} />
-                  <span>Escribir por WhatsApp</span>
-                </button>
-              </div>
-
-              <div className="nav-footer-meta">
-                <span>📍 {agencyInfo.location}</span>
-                <span>•</span>
-                <span>{agencyInfo.hours}</span>
-              </div>
-            </div>
-
           </motion.div>
         </div>
       )}
