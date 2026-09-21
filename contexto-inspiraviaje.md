@@ -37,8 +37,10 @@ La plataforma está diseñada con una filosofía **Mobile-First** orientada a qu
 ```
 inspiraviaje-web/
 ├── public/
-│   ├── logo.png             ← Logo oficial InspiraViaje (amarillo y azul cielo)
-│   └── favicon.svg
+│   ├── logo.png             ← Logo oficial completo InspiraViaje (horizontal con texto)
+│   ├── favicon.png          ← Isotipo oficial (ala azul y sol amarillo) para pestaña del navegador
+│   ├── favicon.ico          ← Favicon formato ICO para navegadores
+│   └── apple-touch-icon.png ← Ícono de alta resolución para móviles y marcadores
 ├── src/
 │   ├── App.jsx              ← Ensamblador principal de la web
 │   ├── App.css              ← Estilos del contenedor general
