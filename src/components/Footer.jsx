@@ -20,7 +20,7 @@ const Footer = ({ onOpenContact }) => {
         <div className="footer-top-grid">
           {/* Columna Logo y Descripción */}
           <div className="footer-brand-col">
-            <img src="/logo.png" alt="InspiraViaje" className="footer-logo" />
+            <img src="/logo.png?v=2" alt="InspiraViaje" className="footer-logo" />
             <p className="footer-slogan">
               {agencyInfo.slogan}. Especialistas en crear momentos inolvidables y vacaciones a tu medida.
             </p>

@@ -20,7 +20,7 @@ const Header = ({ onOpenContact }) => {
         
         {/* Logo a la izquierda */}
         <a href="#" className="header-logo" aria-label="InspiraViaje Inicio">
-          <img src="/logo.png" alt="InspiraViaje Logo" className="logo-image" />
+          <img src="/logo.png?v=2" alt="InspiraViaje Logo" className="logo-image" />
         </a>
 
         {/* Contacto a la derecha */}

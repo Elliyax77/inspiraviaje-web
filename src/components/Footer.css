@@ -20,10 +20,11 @@
 }
 
 .footer-logo {
-  height: 42px;
+  height: 56px;
   width: auto;
+  max-width: 260px;
   object-fit: contain;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .footer-slogan {
