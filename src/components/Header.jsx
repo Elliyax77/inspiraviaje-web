@@ -36,7 +36,7 @@ const Header = ({ onOpenContact, onOpenMenu }) => {
             <span className="contact-label">Contacto</span>
           </button>
 
-          {/* Botón Menú en Píldora Liquid Glass */}
+          {/* Botón Menú en mismo color Liquid Glass del Header */}
           <button 
             type="button" 
             onClick={onOpenMenu}
@@ -44,8 +44,7 @@ const Header = ({ onOpenContact, onOpenMenu }) => {
             aria-label="Abrir menú de opciones"
             title="Menú"
           >
-            <Menu size={18} className="menu-icon" />
-            <span className="menu-label">Menú</span>
+            <Menu size={21} className="menu-icon" />
           </button>
         </div>
 
