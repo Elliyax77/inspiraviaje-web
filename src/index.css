@@ -61,9 +61,10 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  background-color: #FFFFFF;
-  background-image: radial-gradient(ellipse 90% 70% at 50% 50%, #DDF2FD 0%, rgba(224, 242, 254, 0.5) 45%, #FFFFFF 90%);
+  background-color: #BAE6FD;
+  background-image: radial-gradient(ellipse 85% 70% at 50% 45%, #E0F4FE 0%, #BAE6FD 45%, #7DD3FC 85%, #50C0F8 100%);
   background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {

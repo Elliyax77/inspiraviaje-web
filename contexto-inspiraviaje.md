@@ -23,9 +23,9 @@ La plataforma está diseñada con una filosofía **Mobile-First** orientada a qu
   - Títulos y acentos: **Montserrat** (Google Fonts)
   - Cuerpo y lectura: **Plus Jakarta Sans** / **Inter** (Google Fonts)
 - **CSS:** Vanilla CSS modular por componente (sin Tailwind CSS)
-- **Estilo Visual:** Fondo en degradé suave de azul clarito desvanecido al medio (`radial-gradient` elíptico fijado), combinado con **Header en Modo Liquid Glass Amarillo Suave** (ultra vítreo y translúcido).
+- **Estilo Visual:** Fondo en azul clarito vibrante y fresco (`#BAE6FD` - `#7DD3FC`) con desvanecido al medio (`#E0F4FE`), combinado con **Header en Modo Liquid Glass Amarillo Suave** (ultra vítreo y translúcido).
 - **Paleta de Colores de Marca y Fondo:**
-  - **Fondo:** Base blanca con resplandor ambiental elíptico en azul clarito (`#DDF2FD`) ubicado al medio y desvaneciéndose sutilmente hacia los bordes.
+  - **Fondo:** Azul clarito cielo caribeño visible (`#BAE6FD` a `#7DD3FC`) con desvanecido suave hacia el centro luminoso (`#E0F4FE`) fijado en pantalla.
   - **Header Liquid Glass Amarillo:** Tonalidad amarilla suave translúcida (`rgba(254, 240, 138, 0.6)`), ultra vítrea con `backdrop-filter: blur(24px)`, brillo especular en bordes y sombras doradas sutiles.
   - **Amarillo Sol:** `#FFB800` (energía, detalles, llamados de atención)
   - **Azul Cielo:** `#009EE3` (viajes, mar, confianza, botones de acción)
@@ -80,7 +80,7 @@ inspiraviaje-web/
 ---
 
 ## Reglas de diseño a respetar
-- **Fondo:** Azul clarito en desvanecido suave ubicado al medio, integrándose armónicamente con la atmósfera vacacional.
+- **Fondo:** Azul clarito claramente visible (`#BAE6FD` a `#7DD3FC`) con desvanecido al medio, creando un marco vacacional refrescante.
 - **Header:** Mantener el efecto **Modo Liquid Glass** en amarillo suave (acabado acuoso translúcido, no amarillo opaco ni saturado en exceso).
 - **Proporciones obligatorias:**
   - Slider Hero: **16:9** estricto (`aspect-ratio: 16 / 9`).
