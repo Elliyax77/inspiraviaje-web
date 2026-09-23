@@ -1,6 +1,6 @@
 .hero-slider-section {
   padding: 1rem 0 2rem;
-  background-color: transparent;
+  background-color: var(--color-bg);
 }
 
 @media (min-width: 768px) {

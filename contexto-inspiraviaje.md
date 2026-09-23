@@ -23,11 +23,10 @@ La plataforma está diseñada con una filosofía **Mobile-First** orientada a qu
   - Títulos y acentos: **Montserrat** (Google Fonts)
   - Cuerpo y lectura: **Plus Jakarta Sans** / **Inter** (Google Fonts)
 - **CSS:** Vanilla CSS modular por componente (sin Tailwind CSS)
-- **CSS:** Vanilla CSS modular por componente (sin Tailwind CSS)
-- **Estilo Visual:** Glassmorphism moderno con **Liquid Glass** en el Header (amarillo suave muy translúcido y vítreo) y tarjetas/pie de página esmeriladas.
+- **Estilo Visual:** Fondo blanco limpio y luminoso combinado con **Header en Modo Liquid Glass Amarillo Suave** (ultra vítreo y translúcido).
 - **Paleta de Colores de Marca y Fondo:**
-  - **Fondo Dividido Profesional:** Fondo limpio sin patrones gráficos dividido armónicamente en dos zonas: una parte superior/izquierda en un suave y elegante amarillo solar (`#FEF9C3` - `#FEF08A`) y la otra parte inferior/derecha en azul cielo y marino (`#BAE6FD` - `#38BDF8`), enlazadas mediante un degradé suave a 135 grados fijado en pantalla.
-  - **Header Liquid Glass Amarillo:** Tonalidad amarilla suave translúcida (`rgba(254, 240, 138, 0.6)`), ultra vítrea con `backdrop-filter: blur(24px)`, brillo especular en bordes superiores e inferiores y sombras doradas sutiles.
+  - **Fondo Principal:** Blanco puro (`#FFFFFF`) con secciones secundarias suaves (`#F8FAFC`).
+  - **Header Liquid Glass Amarillo:** Tonalidad amarilla suave translúcida (`rgba(254, 240, 138, 0.6)`), ultra vítrea con `backdrop-filter: blur(24px)`, brillo especular en bordes y sombras doradas sutiles.
   - **Amarillo Sol:** `#FFB800` (energía, detalles, llamados de atención)
   - **Azul Cielo:** `#009EE3` (viajes, mar, confianza, botones de acción)
   - **Texto principal:** `#0F172A` (azul pizarra oscuro para lectura óptima)
@@ -81,7 +80,7 @@ inspiraviaje-web/
 ---
 
 ## Reglas de diseño a respetar
-- **Fondo:** Fondo limpio sin patrones, con una división profesional dual en ángulo de 135°: una mitad en tonos amarillos suaves y la otra en azules frescos marinos.
+- **Fondo:** Blanco limpio, luminoso y vacacional con contrastes suaves en `#F8FAFC`.
 - **Header:** Mantener el efecto **Modo Liquid Glass** en amarillo suave (acabado acuoso translúcido, no amarillo opaco ni saturado en exceso).
 - **Proporciones obligatorias:**
   - Slider Hero: **16:9** estricto (`aspect-ratio: 16 / 9`).

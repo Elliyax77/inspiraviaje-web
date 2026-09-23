@@ -9,13 +9,13 @@
   --color-blue-dark: #006699;
   --color-blue-light: #EDF8FD;
   
-  /* Neutros y Glassmorphism */
-  --color-bg: #F8FAFC;
-  --color-bg-subtle: rgba(255, 255, 255, 0.65);
-  --color-bg-card: rgba(255, 255, 255, 0.92);
+  /* Neutros */
+  --color-bg: #FFFFFF;
+  --color-bg-subtle: #F8FAFC;
+  --color-bg-card: #FFFFFF;
   --color-text-main: #0F172A;
   --color-text-muted: #64748B;
-  --color-border: rgba(226, 232, 240, 0.8);
+  --color-border: #E2E8F0;
   
   /* Liquid Glass Amarillo (Suave y muy vítreo) */
   --liquid-yellow-bg: linear-gradient(135deg, rgba(254, 240, 138, 0.6) 0%, rgba(255, 251, 235, 0.42) 42%, rgba(253, 224, 71, 0.5) 100%);
@@ -57,20 +57,11 @@ html {
 
 body {
   font-family: var(--font-body);
+  background-color: var(--color-bg);
   color: var(--color-text-main);
   line-height: 1.5;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  background-color: #F8FAFC;
-  background-image: 
-    /* 1. Aura solar suave en la zona superior izquierda (mitad amarilla) */
-    radial-gradient(ellipse at 18% 22%, rgba(253, 224, 71, 0.45) 0%, rgba(254, 240, 138, 0.22) 45%, transparent 70%),
-    /* 2. Aura marina en la zona inferior derecha (mitad azul) */
-    radial-gradient(ellipse at 82% 78%, rgba(0, 158, 227, 0.40) 0%, rgba(56, 189, 248, 0.22) 50%, transparent 75%),
-    /* 3. División angular profesional: una parte amarilla y la otra azul sin patrones */
-    linear-gradient(135deg, #FEF9C3 0%, #FEF08A 32%, #FFFBEB 47%, #F0F9FF 53%, #BAE6FD 68%, #38BDF8 100%);
-  background-attachment: fixed;
-  background-size: 100% 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
