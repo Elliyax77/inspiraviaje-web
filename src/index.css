@@ -57,11 +57,13 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--color-bg);
   color: var(--color-text-main);
   line-height: 1.5;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  background-color: #FFFFFF;
+  background-image: radial-gradient(ellipse 90% 70% at 50% 50%, #DDF2FD 0%, rgba(224, 242, 254, 0.5) 45%, #FFFFFF 90%);
+  background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {
