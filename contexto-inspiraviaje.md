@@ -23,12 +23,13 @@ La plataforma está diseñada con una filosofía **Mobile-First** orientada a qu
   - Títulos y acentos: **Montserrat** (Google Fonts)
   - Cuerpo y lectura: **Plus Jakarta Sans** / **Inter** (Google Fonts)
 - **CSS:** Vanilla CSS modular por componente (sin Tailwind CSS)
-- **Estilo Visual:** Glassmorphism moderno (Modo Glass en Header, tarjetas y pie de página) combinado con fondo colorido y vivo.
+- **CSS:** Vanilla CSS modular por componente (sin Tailwind CSS)
+- **Estilo Visual:** Glassmorphism moderno con **Liquid Glass** en el Header (amarillo suave muy translúcido y vítreo) y tarjetas/pie de página esmeriladas.
 - **Paleta de Colores de Marca y Fondo:**
-  - **Fondo General Colorido:** Base luminosa `#F0F8FE` con malla de resplandores radiales fijas en Amarillo Sol (`#FFB800`) y Azul Cielo (`#009EE3`), más un patrón SVG de viaje repetitivo (soles, olas marinas, estrellas de brújula, rutas aéreas y constelaciones).
+  - **Fondo Dividido Profesional:** Fondo limpio sin patrones gráficos dividido armónicamente en dos zonas: una parte superior/izquierda en un suave y elegante amarillo solar (`#FEF9C3` - `#FEF08A`) y la otra parte inferior/derecha en azul cielo y marino (`#BAE6FD` - `#38BDF8`), enlazadas mediante un degradé suave a 135 grados fijado en pantalla.
+  - **Header Liquid Glass Amarillo:** Tonalidad amarilla suave translúcida (`rgba(254, 240, 138, 0.6)`), ultra vítrea con `backdrop-filter: blur(24px)`, brillo especular en bordes superiores e inferiores y sombras doradas sutiles.
   - **Amarillo Sol:** `#FFB800` (energía, detalles, llamados de atención)
   - **Azul Cielo:** `#009EE3` (viajes, mar, confianza, botones de acción)
-  - **Efecto Glass:** Translucidez (`rgba(255, 255, 255, 0.72 - 0.92)`), `backdrop-filter: blur(20px)` y bordes sutiles reflectivos.
   - **Texto principal:** `#0F172A` (azul pizarra oscuro para lectura óptima)
   - **Texto secundario:** `#64748B` (pizarra neutro para descripciones)
 
@@ -44,12 +45,12 @@ inspiraviaje-web/
 │   └── apple-touch-icon.png ← Ícono de alta resolución para móviles y marcadores
 ├── src/
 │   ├── App.jsx              ← Ensamblador principal de la web
-│   ├── App.css              ← Estilos del contenedor general (fondo transparente para proyectar el fondo global)
-│   ├── index.css            ← Variables globales, tokens de Glassmorphism, fondo colorido con patrones SVG, utilidades
+│   ├── App.css              ← Estilos del contenedor general (fondo transparente)
+│   ├── index.css            ← Variables globales, tokens de Liquid Glass, fondo dividido amarillo-azul, utilidades
 │   ├── data/
 │   │   └── travelData.js    ← Base de datos local (slides, paquetes, full days, métodos de pago, quiénes somos, FAQ)
 │   └── components/
-│       ├── Header.jsx / .css        ← Encabezado en Modo Glass (frosted glass con blur y reflejos) con logo grande, botón de contacto y botón de 3 rayitas (Menú)
+│       ├── Header.jsx / .css        ← Encabezado en Modo Liquid Glass amarillo suave con logo, botón de contacto y botón de 3 rayitas (Menú)
 │       ├── NavDrawer.jsx / .css     ← Panel lateral desplegable con las 6 opciones de navegación
 │       ├── NavModals.jsx / .css     ← Modales detallados para Información, Full Days, Quiénes Somos y Métodos de Pago
 │       ├── HeroSlider.jsx / .css    ← Slider 16:9 con autoplay, swipe y botón "Más información" (id="promociones")
@@ -62,10 +63,10 @@ inspiraviaje-web/
 ---
 
 ## Secciones y Elementos de la Web (en orden)
-1. **Header (Modo Glass):** 
-   - Diseño estilo **frosted glass** translúcido con `backdrop-filter: blur(20px)` y bordes reflectivos sutiles que se adaptan al hacer scroll.
-   - Logotipo oficial de InspiraViaje a la izquierda (dimensiones optimizadas para alta legibilidad).
-   - A la derecha: Botón de **Contacto** directo con borde y destello de cristal + **Botón de 3 rayitas (Menú)** en contenedor de vidrio esmerilado.
+1. **Header (Modo Liquid Glass Amarillo):** 
+   - Diseño estilo vidrio líquido en amarillo suave translúcido de alta refracción con `backdrop-filter: blur(24px) saturate(190%)` y reflejos especulares.
+   - Logotipo oficial de InspiraViaje a la izquierda.
+   - A la derecha: Botón de **Contacto** azul directo + **Botón de 3 rayitas (Menú)** en vidrio líquido con bisel reflectivo.
 2. **Menú de 3 rayitas (Desplegable lateral):**
    - **1. Información:** Guía en 3 pasos para reservar y preguntas frecuentes (FAQ).
    - **2. Paquetes:** Desplazamiento fluido a la sección de paquetes turísticos (3:4).
@@ -80,8 +81,8 @@ inspiraviaje-web/
 ---
 
 ## Reglas de diseño a respetar
-- **Fondo:** Fondo vibrante y vacacional compuesto por resplandores en degradé amarillo y azul fijados al fondo, acompañado de un patrón SVG con temática turística (soles, olas, brújulas y estrellas).
-- **Header:** Mantener el efecto **Modo Glass** (`backdrop-filter` con saturación y desenfoque, bordes translúcidos y sombras sutiles).
+- **Fondo:** Fondo limpio sin patrones, con una división profesional dual en ángulo de 135°: una mitad en tonos amarillos suaves y la otra en azules frescos marinos.
+- **Header:** Mantener el efecto **Modo Liquid Glass** en amarillo suave (acabado acuoso translúcido, no amarillo opaco ni saturado en exceso).
 - **Proporciones obligatorias:**
   - Slider Hero: **16:9** estricto (`aspect-ratio: 16 / 9`).
   - Tarjetas de Paquetes: **3:4** estricto (`aspect-ratio: 3 / 4`).
