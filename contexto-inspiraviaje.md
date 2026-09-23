@@ -50,7 +50,7 @@ inspiraviaje-web/
 │   ├── data/
 │   │   └── travelData.js    ← Base de datos local (slides, paquetes, full days, métodos de pago, quiénes somos, FAQ)
 │   └── components/
-│       ├── Header.jsx / .css        ← Encabezado en Modo Liquid Glass amarillo suave con logo, botón de contacto y botón de 3 rayitas (Menú)
+│       ├── Header.jsx / .css        ← Encabezado en Modo Liquid Glass amarillo suave con logo, botón de contacto y botón de Menú en cápsula/píldora armonizada
 │       ├── NavDrawer.jsx / .css     ← Panel lateral desplegable con las 6 opciones de navegación
 │       ├── NavModals.jsx / .css     ← Modales detallados para Información, Full Days, Quiénes Somos y Métodos de Pago
 │       ├── HeroSlider.jsx / .css    ← Slider 16:9 con autoplay, swipe y botón "Más información" (id="promociones")
@@ -66,8 +66,8 @@ inspiraviaje-web/
 1. **Header (Modo Liquid Glass Amarillo):** 
    - Diseño estilo vidrio líquido en amarillo suave translúcido de alta refracción con `backdrop-filter: blur(24px) saturate(190%)` y reflejos especulares.
    - Logotipo oficial de InspiraViaje a la izquierda.
-   - A la derecha: Botón de **Contacto** azul directo + **Botón de 3 rayitas (Menú)** en vidrio líquido con bisel reflectivo.
-2. **Menú de 3 rayitas (Desplegable lateral):**
+   - A la derecha: Botón de **Contacto** azul directo + **Botón de Menú** en cápsula/píldora Liquid Glass con icono vectorial `Menu` de Lucide y etiqueta, guardando perfecta armonía geométrica.
+2. **Menú de opciones (Desplegable lateral):**
    - **1. Información:** Guía en 3 pasos para reservar y preguntas frecuentes (FAQ).
    - **2. Paquetes:** Desplazamiento fluido a la sección de paquetes turísticos (3:4).
    - **3. Full Days:** Tours de 1 día (Morrocoy Cayo Sombrero, Isla Larga, Colonia Tovar) con precios, inclusiones y reserva inmediata.

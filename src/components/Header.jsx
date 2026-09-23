@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PhoneCall, MessageCircle } from 'lucide-react';
+import { PhoneCall, MessageCircle, Menu } from 'lucide-react';
 import { agencyInfo } from '../data/travelData';
 import './Header.css';
 
@@ -23,7 +23,7 @@ const Header = ({ onOpenContact, onOpenMenu }) => {
           <img src="/logo.png?v=2" alt="InspiraViaje Logo" className="logo-image" />
         </a>
 
-        {/* Acciones a la derecha: Contacto + 3 rayitas (Menú) */}
+        {/* Acciones a la derecha: Contacto + Menú Armónico */}
         <div className="header-actions">
           <button 
             type="button" 
@@ -36,17 +36,16 @@ const Header = ({ onOpenContact, onOpenMenu }) => {
             <span className="contact-label">Contacto</span>
           </button>
 
-          {/* Botón 3 rayitas (Menú hamburguesa) */}
+          {/* Botón Menú en Píldora Liquid Glass */}
           <button 
             type="button" 
             onClick={onOpenMenu}
-            className="btn-menu-hamburger"
+            className="btn-menu-header"
             aria-label="Abrir menú de opciones"
             title="Menú"
           >
-            <span className="hamburger-line"></span>
-            <span className="hamburger-line"></span>
-            <span className="hamburger-line"></span>
+            <Menu size={18} className="menu-icon" />
+            <span className="menu-label">Menú</span>
           </button>
         </div>
 

@@ -116,49 +116,49 @@
   display: none;
 }
 
-/* Botón 3 Rayitas (Menú Hamburguesa) - Modo Liquid Glass */
-.btn-menu-hamburger {
+/* Botón Menú Estilizado en Píldora Liquid Glass */
+.btn-menu-header {
   display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 5px;
-  width: 44px;
-  height: 44px;
-  background: rgba(255, 255, 255, 0.7);
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  color: #0F172A;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+  padding: 0.6rem 1.15rem;
+  border-radius: var(--radius-full);
   border: 1.5px solid rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(234, 179, 8, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.95);
   cursor: pointer;
-  padding: 0;
-  box-shadow: 0 4px 15px rgba(234, 179, 8, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.95);
-  transition: all 0.25s ease;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.btn-menu-header .menu-icon {
+  color: #0F172A;
+  transition: transform 0.25s ease, color 0.25s ease;
   flex-shrink: 0;
 }
 
-.hamburger-line {
-  display: block;
-  width: 20px;
-  height: 2.5px;
-  background-color: #0F172A;
-  border-radius: 4px;
-  transition: all 0.25s ease;
-}
-
-.btn-menu-hamburger:hover {
-  background: rgba(255, 255, 255, 0.95);
-  border-color: rgba(245, 158, 11, 0.5);
+.btn-menu-header:hover {
+  background: rgba(255, 255, 255, 0.98);
+  color: var(--color-blue);
+  border-color: rgba(0, 158, 227, 0.35);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(234, 179, 8, 0.25), inset 0 1px 0 #FFFFFF;
+  box-shadow: 0 6px 20px rgba(0, 158, 227, 0.2), inset 0 1px 0 #FFFFFF;
 }
 
-.btn-menu-hamburger:hover .hamburger-line {
-  background-color: var(--color-blue);
+.btn-menu-header:hover .menu-icon {
+  color: var(--color-blue);
+  transform: rotate(90deg);
 }
 
-.btn-menu-hamburger:active {
-  transform: translateY(0) scale(0.96);
+.btn-menu-header:active {
+  transform: translateY(0) scale(0.97);
 }
 
 @media (max-width: 480px) {
@@ -179,15 +179,9 @@
     display: block;
   }
 
-  .btn-menu-hamburger {
-    width: 40px;
-    height: 40px;
-    gap: 4px;
-    border-radius: 10px;
-  }
-
-  .hamburger-line {
-    width: 17px;
-    height: 2px;
+  .btn-menu-header {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.85rem;
+    gap: 5px;
   }
 }
