@@ -50,8 +50,8 @@ inspiraviaje-web/
 │   │   └── travelData.js    ← Base de datos local (slides, paquetes, full days, métodos de pago, quiénes somos, FAQ)
 │   └── components/
 │       ├── Header.jsx / .css        ← Encabezado sólido en degradado amarillo a blanco con logo, botón de contacto (oculto en móviles) y botón de Menú circular a juego
-│       ├── NavDrawer.jsx / .css     ← Panel lateral desplegable con las 7 opciones de navegación (incluye Contacto)
-│       ├── NavModals.jsx / .css     ← Modales detallados para Información, Full Days, Quiénes Somos y Métodos de Pago
+│       ├── NavDrawer.jsx / .css     ← Panel lateral desplegable con las 8 opciones de navegación (incluye Contacto y Seguros de Vida)
+│       ├── NavModals.jsx / .css     ← Modales detallados para Información, Full Days, Quiénes Somos, Métodos de Pago y Seguros de Vida & Asistencia
 │       ├── HeroSlider.jsx / .css    ← Slider 16:9 con autoplay, swipe y botón "Más información" (id="promociones")
 │       ├── Packages.jsx / .css      ← Cuadrícula de Paquetes en proporción 3:4 y banner 'Cotiza tu viaje aquí' con botón directo a contacto
 │       ├── ContactModal.jsx / .css  ← Modal interactivo para contacto inmediato por WhatsApp
@@ -66,7 +66,7 @@ inspiraviaje-web/
    - Diseño sólido en degradado cálido de amarillo suave a blanco puro (`#FEE685` / `#FEF08A` a `#FFFFFF`), sin transparencias ni desenfoque para evitar tintes verdosos.
    - Logotipo oficial de InspiraViaje a la izquierda sobre fondo amarillo cálido.
    - A la derecha: Botón de **Contacto** azul directo (visible en pantallas de escritorio y tablets; se oculta en teléfonos móviles para brindar mayor limpieza visual) + **Botón de Menú** circular estilizado en blanco y amarillo sutil.
-2. **Menú de opciones (Desplegable lateral):**
+2. **Menú de opciones (Desplegable lateral con 8 secciones):**
    - **1. Información:** Guía en 3 pasos para reservar y preguntas frecuentes (FAQ).
    - **2. Paquetes:** Desplazamiento fluido a la sección de paquetes turísticos (3:4).
    - **3. Full Days:** Tours de 1 día (Morrocoy Cayo Sombrero, Isla Larga, Colonia Tovar) con precios, inclusiones y reserva inmediata.
@@ -74,6 +74,7 @@ inspiraviaje-web/
    - **5. Quiénes Somos:** Respaldo, trayectoria de más de 5 años, valores y asesoría personalizada.
    - **6. Métodos de Pago:** Zelle, Pago Móvil (tasa BCV), Efectivo USD, Binance Pay (USDT), Tarjetas Internacionales y Plan de Reserva en Cuotas (desde 30% inicial).
    - **7. Contacto:** Opción destacada con acceso directo a canales de atención personalizada (WhatsApp, llamadas, correo e Instagram).
+   - **8. Seguros de Vida:** Sección de protección integral que incluye Seguro de Vida y Protección Familiar, Seguro de Viaje & Asistencia Médica Internacional (apto requisitos consulares/Schengen hasta $100k USD) y Póliza de Accidentes Personales, con botón de cotización directa por WhatsApp y asesoría inmediata.
 3. **Hero Slider:** Carrusel dinámico con destinos estelares, rotación automática hacia la derecha y soporte táctil de gestos (swipe). En pantallas de escritorio conserva su formato panorámico **16:9**; en teléfonos celulares se expande con **min-height: 340px (aspect-ratio: 4:3)** para un impacto visual imponente, tipografía de mayor tamaño y subtítulos visibles. Cada slide incluye en la esquina inferior izquierda su botón **"Más información"**.
 4. **Paquetes Turísticos (3:4) y Banner de Cotización:** Sección destacada con 3 tarjetas en formato vertical 3:4 con acabado frosted glass (ideal para visualización en teléfonos móviles) con fotos espectaculares, precio referencial, detalles y su botón **"Más información"** en la parte inferior izquierda. Al final de la sección incluye el banner interactivo **'Cotiza tu viaje aquí'** con información de asesoría a la medida, facilidades de pago en cuotas y botón directo de contacto.
 5. **Footer:** Canales de atención (WhatsApp, teléfono, correo), redes sociales y derechos reservados sobre un contenedor esmerilado elegante.

@@ -9,7 +9,8 @@ import {
   Users, 
   CreditCard, 
   ChevronRight,
-  MessageCircle
+  MessageCircle,
+  ShieldCheck
 } from 'lucide-react';
 import './NavDrawer.css';
 
@@ -62,6 +63,13 @@ const menuItems = [
     icon: MessageCircle, 
     desc: 'Atención personalizada por WhatsApp, llamada o correo',
     badge: 'Directo'
+  },
+  { 
+    id: 'seguros', 
+    label: 'Seguros de Vida', 
+    icon: ShieldCheck, 
+    desc: 'Protección familiar, salud y asistencia al viajero',
+    badge: 'Protección'
   },
 ];
 
@@ -133,7 +141,7 @@ const NavDrawer = ({ isOpen, onClose, onSelectMenuItem }) => {
                     <motion.button
                       key={item.id}
                       type="button"
-                      className={`nav-menu-card ${item.id === 'contacto' ? 'card-contacto' : ''}`}
+                      className={`nav-menu-card ${item.id === 'contacto' ? 'card-contacto' : ''} ${item.id === 'seguros' ? 'card-seguros' : ''}`}
                       onClick={() => handleItemClick(item.id)}
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}

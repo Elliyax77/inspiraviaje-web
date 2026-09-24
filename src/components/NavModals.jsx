@@ -23,7 +23,9 @@ import {
   fullDayTours, 
   paymentMethods, 
   aboutAgency, 
-  agencyFaq 
+  agencyFaq,
+  insuranceInfo,
+  insurancePlans
 } from '../data/travelData';
 import './NavModals.css';
 
@@ -282,6 +284,89 @@ const NavModals = ({ activeModal, onClose }) => {
               >
                 <MessageCircle size={18} />
                 <span>Solicitar Datos de Pago</span>
+              </button>
+            </div>
+          </div>
+        );
+
+      /* ========================================================
+         5. SEGUROS DE VIDA Y ASISTENCIA AL VIAJERO
+         ======================================================== */
+      case 'seguros':
+        return (
+          <div className="nav-modal-body">
+            <div className="nav-modal-intro">
+              <span className="nav-modal-kicker">PROTECCIÓN INTEGRAL</span>
+              <h3 className="nav-modal-heading">{insuranceInfo.title}</h3>
+              <p className="nav-modal-lead">{insuranceInfo.description}</p>
+            </div>
+
+            {/* Beneficios / Highlights */}
+            <div className="insurance-highlights-grid">
+              {insuranceInfo.highlights.map((item, idx) => (
+                <div key={idx} className="insurance-highlight-card">
+                  <div className="insurance-highlight-icon">
+                    <ShieldCheck size={20} />
+                  </div>
+                  <div>
+                    <h5 className="insurance-highlight-title">{item.title}</h5>
+                    <p className="insurance-highlight-desc">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Listado de Planes de Seguros */}
+            <div className="insurance-plans-list">
+              {insurancePlans.map((plan) => (
+                <div key={plan.id} className="insurance-plan-card">
+                  <div className="insurance-plan-header">
+                    <span 
+                      className="insurance-plan-badge"
+                      style={{ backgroundColor: `${plan.badgeColor}15`, color: plan.badgeColor, borderColor: `${plan.badgeColor}40` }}
+                    >
+                      {plan.badge}
+                    </span>
+                    <h4 className="insurance-plan-title">{plan.title}</h4>
+                  </div>
+
+                  <p className="insurance-plan-description">{plan.description}</p>
+
+                  <div className="insurance-coverage-box">
+                    <span className="insurance-coverage-heading">Coberturas Principales:</span>
+                    <ul className="insurance-coverage-list">
+                      {plan.coverage.map((cov, i) => (
+                        <li key={i} className="insurance-coverage-item">
+                          <CheckCircle2 size={16} className="coverage-icon" />
+                          <span>{cov}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <button 
+                    type="button" 
+                    onClick={() => openWhatsApp(plan.waMessage)}
+                    className="btn-quote-insurance"
+                  >
+                    <MessageCircle size={17} />
+                    <span>Cotizar Póliza por WhatsApp</span>
+                  </button>
+                </div>
+              ))}
+            </div>
+
+            {/* Destacado o Soporte */}
+            <div className="nav-modal-cta-box insurance-cta-bottom">
+              <h4>¿Tienes un viaje próximo o deseas proteger a tu familia?</h4>
+              <p>Nuestros asesores certificados te brindan cotización inmediata según destino, días o beneficiarios.</p>
+              <button 
+                type="button" 
+                onClick={() => openWhatsApp("¡Hola InspiraViaje! Quisiera una cotización y asesoría personalizada sobre sus pólizas de seguros de vida y viaje.")}
+                className="btn-modal-action-primary"
+              >
+                <MessageCircle size={18} />
+                <span>Hablar con un Asesor de Seguros</span>
               </button>
             </div>
           </div>

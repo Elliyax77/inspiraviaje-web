@@ -230,3 +230,59 @@ export const agencyFaq = [
     a: "¡Totalmente! Si viajas en pareja, familia o grupo corporativo, adaptamos fechas, noches adicionales, tours especiales y categorías de hospedaje a tu medida."
   }
 ];
+
+export const insuranceInfo = {
+  title: "Seguros de Vida & Asistencia — InspiraViaje",
+  subtitle: "Cuidamos de ti y de tu familia en cada etapa y destino",
+  description: "En InspiraViaje no solo diseñamos vacaciones inolvidables: también protegemos tu futuro y la tranquilidad de los tuyos. Te ofrecemos pólizas de vida, salud y asistencia médica internacional respaldadas por aseguradoras líderes.",
+  highlights: [
+    { title: "Respaldo y Confianza", text: "Alianzas formales con aseguradoras nacionales e internacionales de sólida trayectoria." },
+    { title: "Atención y Emergencias 24/7", text: "Central de asistencia telefónica y WhatsApp disponible las 24 horas del día." },
+    { title: "Emisión Rápida y Digital", text: "Recibe tu póliza y certificado oficial en formato digital en minutos, sin trámites complicados." }
+  ]
+};
+
+export const insurancePlans = [
+  {
+    id: "vida-familiar",
+    title: "Seguro de Vida y Protección Familiar",
+    badge: "Principal",
+    badgeColor: "#009EE3",
+    description: "Tranquilidad financiera y respaldo económico directo para tus seres queridos ante cualquier imprevisto.",
+    coverage: [
+      "Indemnización por fallecimiento e incapacidad total",
+      "Soporte económico directo a tus beneficiarios designados",
+      "Cobertura nacional e internacional 24 horas",
+      "Planes flexibles adaptados a tu presupuesto"
+    ],
+    waMessage: "¡Hola InspiraViaje! Quisiera información y cotización sobre el Seguro de Vida y Protección Familiar."
+  },
+  {
+    id: "asistencia-viajero",
+    title: "Seguro de Viaje & Asistencia Médica Internacional",
+    badge: "Internacional",
+    badgeColor: "#FFB800",
+    description: "Viaja al exterior protegido ante emergencias médicas. Cumple con todos los requisitos de visas y normativas consulares (Europa / Schengen, EE.UU. y Latinoamérica).",
+    coverage: [
+      "Gastos médicos de emergencia hasta $100,000 USD",
+      "Repatriación sanitaria y traslado de un acompañante",
+      "Compensación por pérdida o retraso de equipaje",
+      "Cancelación de vuelos y asesoría legal internacional"
+    ],
+    waMessage: "¡Hola InspiraViaje! Deseo cotizar una póliza de Asistencia Médica Internacional / Seguro de Viaje."
+  },
+  {
+    id: "accidentes-personales",
+    title: "Póliza de Accidentes Personales",
+    badge: "Cobertura 24/7",
+    badgeColor: "#0F172A",
+    description: "Protección integral ante accidentes durante viajes, excursiones, deportes acuáticos o tu rutina diaria.",
+    coverage: [
+      "Reembolso de gastos médicos y quirúrgicos por accidentes",
+      "Renta diaria por hospitalización",
+      "Acceso a red de clínicas afiliadas de primer nivel",
+      "Atención de emergencias traumatológicas sin deducible"
+    ],
+    waMessage: "¡Hola InspiraViaje! Me gustaría información sobre la Póliza de Accidentes Personales."
+  }
+];

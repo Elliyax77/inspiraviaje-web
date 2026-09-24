@@ -590,6 +590,183 @@
   box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
 }
 
+/* ========================================================
+   SECCIÓN SEGUROS DE VIDA Y ASISTENCIA
+   ======================================================== */
+.insurance-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.insurance-highlight-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  background: #F8FAFC;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+}
+
+.insurance-highlight-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(0, 158, 227, 0.12);
+  color: var(--color-blue);
+  flex-shrink: 0;
+}
+
+.insurance-highlight-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 0.2rem;
+}
+
+.insurance-highlight-desc {
+  font-size: 0.74rem;
+  color: var(--color-text-muted);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.insurance-plans-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
+.insurance-plan-card {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(226, 232, 240, 0.95);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.4rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.insurance-plan-card:hover {
+  border-color: rgba(0, 158, 227, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 158, 227, 0.08);
+  transform: translateY(-2px);
+}
+
+.insurance-plan-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.insurance-plan-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.insurance-plan-title {
+  font-family: var(--font-heading);
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin: 0;
+}
+
+.insurance-plan-description {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+  margin-bottom: 0.85rem;
+}
+
+.insurance-coverage-box {
+  background: #F8FAFC;
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(226, 232, 240, 0.7);
+}
+
+.insurance-coverage-heading {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.insurance-coverage-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.insurance-coverage-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--color-text-main);
+  line-height: 1.35;
+}
+
+.insurance-coverage-item .coverage-icon {
+  color: #10B981;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.btn-quote-insurance {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #FFFFFF;
+  color: var(--color-blue);
+  border: 1.5px solid var(--color-blue);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.65rem 1.2rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-quote-insurance:hover {
+  background: var(--color-blue);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 158, 227, 0.25);
+  transform: translateY(-1px);
+}
+
+.insurance-cta-bottom {
+  background: linear-gradient(135deg, rgba(0, 158, 227, 0.06) 0%, rgba(255, 184, 0, 0.08) 100%);
+  border: 1.5px solid rgba(0, 158, 227, 0.25);
+}
+
 @media (max-width: 480px) {
   .nav-modal-container {
     max-height: 94vh;
@@ -598,5 +775,10 @@
 
   .nav-modal-body {
     padding: 1.15rem;
+  }
+
+  .insurance-highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
   }
 }
