@@ -114,60 +114,55 @@ const HeroSlider = ({ onSelectSlide }) => {
               animate="center"
               exit="exit"
             >
-              {/* Imagen 16:9 de fondo */}
-              <img 
-                src={currentSlide.image} 
-                alt={currentSlide.title} 
-                className="slide-image"
-              />
+              {/* Contenedor de la Imagen */}
+              <div className="slide-media-wrap">
+                <img 
+                  src={currentSlide.image} 
+                  alt={currentSlide.title} 
+                  className="slide-image"
+                />
 
-              {/* Degradado para legibilidad perfecta */}
-              <div className="slide-overlay-gradient"></div>
+                {/* Degradado para legibilidad del botón */}
+                <div className="slide-overlay-gradient"></div>
 
-              {/* Información y botón en la parte inferior izquierda */}
+                {/* BOTÓN DENTRO DE LA IMAGEN (En celular es lo ÚNICO que va adentro) */}
+                <div className="slide-inside-action">
+                  <button
+                    type="button"
+                    className="btn-more-info slider-btn-inside"
+                    onClick={() => openWhatsApp(currentSlide.waMessage)}
+                    aria-label={`Más información sobre ${currentSlide.title}`}
+                  >
+                    <span>Más información</span>
+                    <ArrowRight size={15} className="btn-arrow-icon" />
+                  </button>
+                </div>
+              </div>
+
+              {/* Información del Destino (En celular va afuera de la imagen; en desktop flota adentro) */}
               <div className="slide-caption-bottom-left">
-                <motion.span 
-                  className="slide-badge"
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
-                >
+                <span className="slide-badge">
                   {currentSlide.badge}
-                </motion.span>
+                </span>
                 
-                <motion.h2 
-                  className="slide-title"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                >
+                <h2 className="slide-title">
                   {currentSlide.title}
-                </motion.h2>
+                </h2>
 
-                <motion.p 
-                  className="slide-subtitle"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 }}
-                >
+                <p className="slide-subtitle">
                   {currentSlide.subtitle}
-                </motion.p>
+                </p>
 
-                {/* BOTÓN OBLIGATORIO: Inferior Izquierda -> 'Más información' */}
-                <motion.button
+                {/* BOTÓN EN DESKTOP (en celular se oculta este y se usa slider-btn-inside) */}
+                <button
                   type="button"
-                  className="btn-more-info slider-btn"
+                  className="btn-more-info slider-btn slider-btn-desktop"
                   onClick={() => openWhatsApp(currentSlide.waMessage)}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.5 }}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
                   aria-label={`Más información sobre ${currentSlide.title}`}
                 >
                   <span>Más información</span>
                   <ArrowRight size={16} className="btn-arrow-icon" />
-                </motion.button>
+                </button>
               </div>
 
             </motion.div>

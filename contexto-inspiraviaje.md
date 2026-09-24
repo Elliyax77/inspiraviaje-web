@@ -74,7 +74,7 @@ inspiraviaje-web/
    - **5. Quiénes Somos:** Respaldo, trayectoria de más de 5 años, valores y asesoría personalizada.
    - **6. Métodos de Pago:** Zelle, Pago Móvil (tasa BCV), Efectivo USD, Binance Pay (USDT), Tarjetas Internacionales y Plan de Reserva en Cuotas (desde 30% inicial).
    - **7. Contacto:** Opción destacada con acceso directo a canales de atención personalizada (WhatsApp, llamadas, correo e Instagram).
-3. **Hero Slider:** Carrusel dinámico con destinos estelares, rotación automática hacia la derecha y soporte táctil de gestos (swipe). En pantallas de escritorio conserva su formato panorámico **16:9**; en teléfonos celulares se expande con **min-height: 340px (aspect-ratio: 4:3)** para un impacto visual imponente, tipografía de mayor tamaño y subtítulos visibles. Cada slide incluye en la esquina inferior izquierda su botón **"Más información"**.
+3. **Hero Slider:** Carrusel dinámico con destinos estelares, rotación automática hacia la derecha y soporte táctil de gestos (swipe). En pantallas de escritorio conserva su formato panorámico **16:9** con textos overlay. En teléfonos celulares se estructura en un card moderno donde **la información (badge, título y subtítulo) queda fuera de la imagen** sobre fondo blanco nítido, mientras que **lo único adentro de la fotografía es el botón 'Más información'** en la esquina inferior izquierda.
 4. **Paquetes Turísticos (3:4) y Banner de Cotización:** Sección destacada con 3 tarjetas en formato vertical 3:4 con acabado frosted glass (ideal para visualización en teléfonos móviles) con fotos espectaculares, precio referencial, detalles y su botón **"Más información"** en la parte inferior izquierda. Al final de la sección incluye el banner interactivo **'Cotiza tu viaje aquí'** con información de asesoría a la medida, facilidades de pago en cuotas y botón directo de contacto.
 5. **Footer:** Canales de atención (WhatsApp, teléfono, correo), redes sociales y derechos reservados sobre un contenedor esmerilado elegante.
 
@@ -83,8 +83,8 @@ inspiraviaje-web/
 ## Reglas de diseño a respetar
 - **Fondo:** Azul clarito claramente visible (`#BAE6FD` a `#7DD3FC`) con desvanecido al medio, creando un marco vacacional refrescante.
 - **Header:** Mantener el degradado sólido amarillo desvanecido a blanco, sin transparencias ni efecto glass sobre el fondo azul.
-- **Proporciones:**
-  - Slider Hero: **16:9** en desktop / **4:3 con min-height de 340px** en smartphones para destacar y llamar la atención.
+- **Proporciones y Ubicaciones:**
+  - Slider Hero: **16:9** en desktop / En celulares: formato card con información afuera de la foto y **botón 'Más información' como único elemento dentro de la imagen**.
   - Tarjetas de Paquetes: **3:4** estricto (`aspect-ratio: 3 / 4`).
 - **Ubicación del botón de acción en las imágenes:** Siempre en la **parte inferior izquierda**.
 - **Máxima optimización para teléfonos móviles:** botones táctiles generosos (mínimo 44px de altura), tipografías legibles y soporte para arrastrar/swipe.
