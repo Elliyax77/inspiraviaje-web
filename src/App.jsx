@@ -24,6 +24,8 @@ function App() {
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
       }
+    } else if (id === 'contacto') {
+      setContactOpen(true);
     } else {
       // informacion, full-days, quienes-somos, metodos-pago
       setActiveModal(id);

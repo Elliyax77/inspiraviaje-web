@@ -19,6 +19,7 @@
   - **4. Promociones:** Enlace directo a ofertas activas y temporadas especiales.
   - **5. Quiénes Somos:** Historia de la agencia, pilares de confianza, estadísticas (+5 años, +3.200 viajeros satisfechos).
   - **6. Métodos de Pago:** Información transparente sobre Pago Móvil (a tasa oficial BCV), Zelle ($ USD), Efectivo en Divisas, Binance Pay (USDT), Tarjetas Internacionales y Plan de Financiamiento en Cuotas (congelación de tarifa con el 30%).
+  - **7. Contacto:** Canales de atención directa e inmediata (WhatsApp, llamadas, correo electrónico e Instagram).
 - 💬 **Integración WhatsApp Omnipresente:** Cada paquete y tour genera un mensaje contextual pre-redactado para atención directa con un asesor turístico.
 - 🎨 **Paleta de Identidad de Marca:**
   - Blanco Principal (`#FFFFFF`)

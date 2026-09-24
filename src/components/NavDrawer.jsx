@@ -8,7 +8,8 @@ import {
   Sparkles, 
   Users, 
   CreditCard, 
-  ChevronRight 
+  ChevronRight,
+  MessageCircle
 } from 'lucide-react';
 import './NavDrawer.css';
 
@@ -54,6 +55,13 @@ const menuItems = [
     icon: CreditCard, 
     desc: 'Zelle, Pago Móvil a tasa BCV, Efectivo $, Cuotas',
     badge: 'Flexible'
+  },
+  { 
+    id: 'contacto', 
+    label: 'Contacto', 
+    icon: MessageCircle, 
+    desc: 'Atención personalizada por WhatsApp, llamada o correo',
+    badge: 'Directo'
   },
 ];
 
@@ -125,7 +133,7 @@ const NavDrawer = ({ isOpen, onClose, onSelectMenuItem }) => {
                     <motion.button
                       key={item.id}
                       type="button"
-                      className="nav-menu-card"
+                      className={`nav-menu-card ${item.id === 'contacto' ? 'card-contacto' : ''}`}
                       onClick={() => handleItemClick(item.id)}
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}

@@ -61,6 +61,11 @@
   .site-header.scrolled .logo-image {
     height: 44px;
   }
+
+  /* Ocultar botón de contacto del header en móviles (se accede desde el menú) */
+  .btn-contact-header {
+    display: none !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -160,19 +165,6 @@
 @media (max-width: 480px) {
   .header-actions {
     gap: 8px;
-  }
-
-  .btn-contact-header {
-    padding: 0.5rem 0.9rem;
-    font-size: 0.85rem;
-  }
-  
-  .contact-icon-desktop {
-    display: none;
-  }
-  
-  .contact-icon-mobile {
-    display: block;
   }
 
   .btn-menu-header {

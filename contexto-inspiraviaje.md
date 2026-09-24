@@ -49,8 +49,8 @@ inspiraviaje-web/
 │   ├── data/
 │   │   └── travelData.js    ← Base de datos local (slides, paquetes, full days, métodos de pago, quiénes somos, FAQ)
 │   └── components/
-│       ├── Header.jsx / .css        ← Encabezado en Modo Liquid Glass amarillo suave con logo, botón de contacto y botón de Menú circular a juego
-│       ├── NavDrawer.jsx / .css     ← Panel lateral desplegable con las 6 opciones de navegación
+│       ├── Header.jsx / .css        ← Encabezado en Modo Liquid Glass amarillo suave con logo, botón de contacto (oculto en móviles) y botón de Menú circular a juego
+│       ├── NavDrawer.jsx / .css     ← Panel lateral desplegable con las 7 opciones de navegación (incluye Contacto)
 │       ├── NavModals.jsx / .css     ← Modales detallados para Información, Full Days, Quiénes Somos y Métodos de Pago
 │       ├── HeroSlider.jsx / .css    ← Slider 16:9 con autoplay, swipe y botón "Más información" (id="promociones")
 │       ├── Packages.jsx / .css      ← Cuadrícula de Paquetes en proporción 3:4 con tarjetas frosted glass y botón "Más información" (id="paquetes")
@@ -65,7 +65,7 @@ inspiraviaje-web/
 1. **Header (Modo Liquid Glass Amarillo):** 
    - Diseño estilo vidrio líquido en amarillo suave translúcido de alta refracción con `backdrop-filter: blur(24px) saturate(190%)` y reflejos especulares.
    - Logotipo oficial de InspiraViaje a la izquierda.
-   - A la derecha: Botón de **Contacto** azul directo + **Botón de Menú** circular estilizado en el mismo color Liquid Glass amarillo del encabezado (sin texto, con icono vectorial `Menu` de Lucide integrado).
+   - A la derecha: Botón de **Contacto** azul directo (visible en pantallas de escritorio y tablets; se oculta en teléfonos móviles para brindar mayor limpieza visual) + **Botón de Menú** circular estilizado en el mismo color Liquid Glass amarillo del encabezado (sin texto, con icono vectorial `Menu` de Lucide integrado).
 2. **Menú de opciones (Desplegable lateral):**
    - **1. Información:** Guía en 3 pasos para reservar y preguntas frecuentes (FAQ).
    - **2. Paquetes:** Desplazamiento fluido a la sección de paquetes turísticos (3:4).
@@ -73,6 +73,7 @@ inspiraviaje-web/
    - **4. Promociones:** Desplazamiento fluido al slider de promociones principales.
    - **5. Quiénes Somos:** Respaldo, trayectoria de más de 5 años, valores y asesoría personalizada.
    - **6. Métodos de Pago:** Zelle, Pago Móvil (tasa BCV), Efectivo USD, Binance Pay (USDT), Tarjetas Internacionales y Plan de Reserva en Cuotas (desde 30% inicial).
+   - **7. Contacto:** Opción destacada con acceso directo a canales de atención personalizada (WhatsApp, llamadas, correo e Instagram).
 3. **Hero Slider (16:9):** Carrusel dinámico de proporción panorámica 16:9 con 3 destinos estelares que rotan hacia la derecha automáticamente y por interacción táctil. Cada slide incluye en la esquina inferior izquierda su botón **"Más información"**.
 4. **Paquetes Turísticos (3:4):** Sección destacada con 3 tarjetas en formato vertical 3:4 con acabado frosted glass (ideal para visualización en teléfonos móviles) con fotos espectaculares, precio referencial, detalles y su botón **"Más información"** en la parte inferior izquierda.
 5. **Footer:** Canales de atención (WhatsApp, teléfono, correo), redes sociales y derechos reservados sobre un contenedor esmerilado elegante.
