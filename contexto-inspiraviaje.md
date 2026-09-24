@@ -53,7 +53,7 @@ inspiraviaje-web/
 │       ├── NavDrawer.jsx / .css     ← Panel lateral desplegable con las 7 opciones de navegación (incluye Contacto)
 │       ├── NavModals.jsx / .css     ← Modales detallados para Información, Full Days, Quiénes Somos y Métodos de Pago
 │       ├── HeroSlider.jsx / .css    ← Slider 16:9 con autoplay, swipe y botón "Más información" (id="promociones")
-│       ├── Packages.jsx / .css      ← Cuadrícula de Paquetes en proporción 3:4 con tarjetas frosted glass y botón "Más información" (id="paquetes")
+│       ├── Packages.jsx / .css      ← Cuadrícula de Paquetes en proporción 3:4 y banner 'Cotiza tu viaje aquí' con botón directo a contacto
 │       ├── ContactModal.jsx / .css  ← Modal interactivo para contacto inmediato por WhatsApp
 │       └── Footer.jsx / .css        ← Pie de página en modo frosted glass con redes, información y soporte
 └── contexto-inspiraviaje.md         ← Documento de contexto y reglas del proyecto
@@ -75,7 +75,7 @@ inspiraviaje-web/
    - **6. Métodos de Pago:** Zelle, Pago Móvil (tasa BCV), Efectivo USD, Binance Pay (USDT), Tarjetas Internacionales y Plan de Reserva en Cuotas (desde 30% inicial).
    - **7. Contacto:** Opción destacada con acceso directo a canales de atención personalizada (WhatsApp, llamadas, correo e Instagram).
 3. **Hero Slider (16:9):** Carrusel dinámico de proporción panorámica 16:9 con 3 destinos estelares que rotan hacia la derecha automáticamente y por interacción táctil. Cada slide incluye en la esquina inferior izquierda su botón **"Más información"**.
-4. **Paquetes Turísticos (3:4):** Sección destacada con 3 tarjetas en formato vertical 3:4 con acabado frosted glass (ideal para visualización en teléfonos móviles) con fotos espectaculares, precio referencial, detalles y su botón **"Más información"** en la parte inferior izquierda.
+4. **Paquetes Turísticos (3:4) y Banner de Cotización:** Sección destacada con 3 tarjetas en formato vertical 3:4 con acabado frosted glass (ideal para visualización en teléfonos móviles) con fotos espectaculares, precio referencial, detalles y su botón **"Más información"** en la parte inferior izquierda. Al final de la sección incluye el banner interactivo **'Cotiza tu viaje aquí'** con información de asesoría a la medida, facilidades de pago en cuotas y botón directo de contacto.
 5. **Footer:** Canales de atención (WhatsApp, teléfono, correo), redes sociales y derechos reservados sobre un contenedor esmerilado elegante.
 
 ---

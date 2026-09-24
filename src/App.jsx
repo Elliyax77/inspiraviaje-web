@@ -45,7 +45,7 @@ function App() {
         <HeroSlider onOpenContact={() => setContactOpen(true)} />
 
         {/* 3. Sección Paquetes Turísticos con 3 imágenes en proporción 3:4 y botón Más Información */}
-        <Packages />
+        <Packages onOpenContact={() => setContactOpen(true)} />
       </main>
 
       {/* 4. Footer con canales de atención y copyright */}

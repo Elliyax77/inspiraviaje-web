@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, ArrowRight, Clock, MapPin } from 'lucide-react';
+import { Sparkles, ArrowRight, Clock, MapPin, MessageCircle, CheckCircle2 } from 'lucide-react';
 import { travelPackages, agencyInfo } from '../data/travelData';
 import './Packages.css';
 
-const Packages = () => {
+const Packages = ({ onOpenContact }) => {
   const openWhatsApp = (msg) => {
     const encoded = encodeURIComponent(msg);
     window.open(`https://wa.me/${agencyInfo.whatsappNumber}?text=${encoded}`, '_blank');
@@ -103,6 +103,59 @@ const Packages = () => {
             </motion.article>
           ))}
         </div>
+
+        {/* Banner: Cotiza tu viaje aquí */}
+        <motion.div 
+          className="quote-cta-banner"
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="quote-cta-glow-decor"></div>
+          
+          <div className="quote-cta-content">
+            <div className="quote-cta-badge">
+              <Sparkles size={15} />
+              <span>EXPERIENCIA A TU MEDIDA</span>
+            </div>
+
+            <h3 className="quote-cta-title">
+              ¿No encuentras tu destino soñado? <br />
+              <span className="quote-title-accent">Cotiza tu viaje aquí</span>
+            </h3>
+
+            <p className="quote-cta-desc">
+              Creamos paquetes personalizados con boletos aéreos, posadas u hoteles todo incluido, tours exclusivos y planes de reserva en cuotas. ¡Cuéntanos a dónde quieres ir y nosotros lo hacemos realidad!
+            </p>
+
+            <div className="quote-cta-pills">
+              <div className="quote-pill">
+                <CheckCircle2 size={15} className="quote-pill-icon" />
+                <span>Asesoría 100% personalizada</span>
+              </div>
+              <div className="quote-pill">
+                <CheckCircle2 size={15} className="quote-pill-icon" />
+                <span>Planes de reserva en cuotas</span>
+              </div>
+              <div className="quote-pill">
+                <CheckCircle2 size={15} className="quote-pill-icon" />
+                <span>Destinos nacionales e internacionales</span>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onClick={onOpenContact}
+              className="btn-quote-contact"
+              aria-label="Cotiza tu viaje aquí con un asesor"
+            >
+              <MessageCircle size={20} />
+              <span>Contactar a un Asesor</span>
+              <ArrowRight size={18} className="quote-btn-arrow" />
+            </button>
+          </div>
+        </motion.div>
 
       </div>
     </section>

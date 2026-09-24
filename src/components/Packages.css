@@ -248,3 +248,159 @@
   font-weight: 800;
   font-size: 0.95rem;
 }
+
+/* ========================================================
+   Banner / Card 'Cotiza tu viaje aquí'
+   ======================================================== */
+.quote-cta-banner {
+  margin-top: 3.5rem;
+  background: linear-gradient(135deg, #0284C7 0%, #0369A1 45%, #0A3254 100%);
+  border-radius: 24px;
+  padding: 2.5rem 1.25rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 45px -10px rgba(0, 158, 227, 0.45), 0 10px 25px rgba(15, 23, 42, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .quote-cta-banner {
+    margin-top: 4.5rem;
+    padding: 3.5rem 2.5rem;
+    border-radius: 28px;
+  }
+}
+
+.quote-cta-glow-decor {
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130%;
+  height: 90%;
+  background: radial-gradient(ellipse at center, rgba(255, 184, 0, 0.22) 0%, rgba(0, 158, 227, 0.2) 40%, transparent 70%);
+  pointer-events: none;
+}
+
+.quote-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote-cta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #FEF08A;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.74rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1.1rem;
+}
+
+.quote-cta-title {
+  color: #FFFFFF;
+  font-size: clamp(1.65rem, 4vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 0.95rem;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.quote-title-accent {
+  color: var(--color-yellow);
+  display: inline-block;
+}
+
+.quote-cta-desc {
+  color: rgba(241, 245, 249, 0.94);
+  font-size: clamp(0.92rem, 1.8vw, 1.02rem);
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+  max-width: 580px;
+}
+
+.quote-cta-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.quote-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.quote-pill-icon {
+  color: var(--color-yellow);
+  flex-shrink: 0;
+}
+
+.btn-quote-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #FFB800 0%, #FFA000 100%);
+  color: #0F172A;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.98rem;
+  letter-spacing: 0.3px;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 10px 25px rgba(255, 184, 0, 0.45);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  min-height: 48px;
+}
+
+.btn-quote-contact:hover {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+  color: var(--color-blue);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+  border-color: #FFFFFF;
+}
+
+.btn-quote-contact:hover .quote-btn-arrow {
+  transform: translateX(4px);
+}
+
+.btn-quote-contact:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.quote-btn-arrow {
+  transition: transform 0.25s ease;
+}
