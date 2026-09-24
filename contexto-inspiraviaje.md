@@ -23,10 +23,10 @@ La plataforma está diseñada con una filosofía **Mobile-First** orientada a qu
   - Títulos y acentos: **Montserrat** (Google Fonts)
   - Cuerpo y lectura: **Plus Jakarta Sans** / **Inter** (Google Fonts)
 - **CSS:** Vanilla CSS modular por componente (sin Tailwind CSS)
-- **Estilo Visual:** Fondo en azul clarito vibrante y fresco (`#BAE6FD` - `#7DD3FC`) con desvanecido al medio (`#E0F4FE`), combinado con **Header en Modo Liquid Glass Amarillo Suave** (ultra vítreo y translúcido).
+- **Estilo Visual:** Fondo en azul clarito vibrante y fresco (`#BAE6FD` - `#7DD3FC`) con desvanecido al medio (`#E0F4FE`), combinado con **Header en Amarillo Suave con desvanecido a Blanco** (sólido, limpio y sin efecto glass, garantizando nitidez total).
 - **Paleta de Colores de Marca y Fondo:**
   - **Fondo:** Azul clarito cielo caribeño visible (`#BAE6FD` a `#7DD3FC`) con desvanecido suave hacia el centro luminoso (`#E0F4FE`) fijado en pantalla.
-  - **Header Liquid Glass Amarillo:** Tonalidad amarilla suave translúcida (`rgba(254, 240, 138, 0.6)`), ultra vítrea con `backdrop-filter: blur(24px)`, brillo especular en bordes y sombras doradas sutiles.
+  - **Header Amarillo a Blanco:** Degradado cálido sólido (`#FEE685` / `#FEF08A` a `#FFFFFF`), sin transparencias ni `backdrop-filter`, con borde sutil dorado y sombra suave.
   - **Amarillo Sol:** `#FFB800` (energía, detalles, llamados de atención)
   - **Azul Cielo:** `#009EE3` (viajes, mar, confianza, botones de acción)
   - **Texto principal:** `#0F172A` (azul pizarra oscuro para lectura óptima)
@@ -45,11 +45,11 @@ inspiraviaje-web/
 ├── src/
 │   ├── App.jsx              ← Ensamblador principal de la web
 │   ├── App.css              ← Estilos del contenedor general (fondo transparente)
-│   ├── index.css            ← Variables globales, tokens de Liquid Glass, fondo dividido amarillo-azul, utilidades
+│   ├── index.css            ← Variables globales, tokens de Header amarillo-blanco, utilidades
 │   ├── data/
 │   │   └── travelData.js    ← Base de datos local (slides, paquetes, full days, métodos de pago, quiénes somos, FAQ)
 │   └── components/
-│       ├── Header.jsx / .css        ← Encabezado en Modo Liquid Glass amarillo suave con logo, botón de contacto (oculto en móviles) y botón de Menú circular a juego
+│       ├── Header.jsx / .css        ← Encabezado sólido en degradado amarillo a blanco con logo, botón de contacto (oculto en móviles) y botón de Menú circular a juego
 │       ├── NavDrawer.jsx / .css     ← Panel lateral desplegable con las 7 opciones de navegación (incluye Contacto)
 │       ├── NavModals.jsx / .css     ← Modales detallados para Información, Full Days, Quiénes Somos y Métodos de Pago
 │       ├── HeroSlider.jsx / .css    ← Slider 16:9 con autoplay, swipe y botón "Más información" (id="promociones")
@@ -62,10 +62,10 @@ inspiraviaje-web/
 ---
 
 ## Secciones y Elementos de la Web (en orden)
-1. **Header (Modo Liquid Glass Amarillo):** 
-   - Diseño estilo vidrio líquido en amarillo suave translúcido de alta refracción con `backdrop-filter: blur(24px) saturate(190%)` y reflejos especulares.
-   - Logotipo oficial de InspiraViaje a la izquierda.
-   - A la derecha: Botón de **Contacto** azul directo (visible en pantallas de escritorio y tablets; se oculta en teléfonos móviles para brindar mayor limpieza visual) + **Botón de Menú** circular estilizado en el mismo color Liquid Glass amarillo del encabezado (sin texto, con icono vectorial `Menu` de Lucide integrado).
+1. **Header (Amarillo desvanecido a Blanco):** 
+   - Diseño sólido en degradado cálido de amarillo suave a blanco puro (`#FEE685` / `#FEF08A` a `#FFFFFF`), sin transparencias ni desenfoque para evitar tintes verdosos.
+   - Logotipo oficial de InspiraViaje a la izquierda sobre fondo amarillo cálido.
+   - A la derecha: Botón de **Contacto** azul directo (visible en pantallas de escritorio y tablets; se oculta en teléfonos móviles para brindar mayor limpieza visual) + **Botón de Menú** circular estilizado en blanco y amarillo sutil.
 2. **Menú de opciones (Desplegable lateral):**
    - **1. Información:** Guía en 3 pasos para reservar y preguntas frecuentes (FAQ).
    - **2. Paquetes:** Desplazamiento fluido a la sección de paquetes turísticos (3:4).
@@ -82,7 +82,7 @@ inspiraviaje-web/
 
 ## Reglas de diseño a respetar
 - **Fondo:** Azul clarito claramente visible (`#BAE6FD` a `#7DD3FC`) con desvanecido al medio, creando un marco vacacional refrescante.
-- **Header:** Mantener el efecto **Modo Liquid Glass** en amarillo suave (acabado acuoso translúcido, no amarillo opaco ni saturado en exceso).
+- **Header:** Mantener el degradado sólido amarillo desvanecido a blanco, sin transparencias ni efecto glass sobre el fondo azul.
 - **Proporciones obligatorias:**
   - Slider Hero: **16:9** estricto (`aspect-ratio: 16 / 9`).
   - Tarjetas de Paquetes: **3:4** estricto (`aspect-ratio: 3 / 4`).
