@@ -293,26 +293,6 @@
   align-items: center;
 }
 
-.quote-cta-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  color: #FEF08A;
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 0.74rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding: 0.4rem 1rem;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  margin-bottom: 1.1rem;
-}
-
 .quote-cta-title {
   color: #FFFFFF;
   font-size: clamp(1.65rem, 4vw, 2.4rem);

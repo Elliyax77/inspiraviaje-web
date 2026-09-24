@@ -115,11 +115,6 @@ const Packages = ({ onOpenContact }) => {
           <div className="quote-cta-glow-decor"></div>
           
           <div className="quote-cta-content">
-            <div className="quote-cta-badge">
-              <Sparkles size={15} />
-              <span>EXPERIENCIA A TU MEDIDA</span>
-            </div>
-
             <h3 className="quote-cta-title">
               ¿No encuentras tu destino soñado? <br />
               <span className="quote-title-accent">Cotiza tu viaje aquí</span>
