@@ -116,7 +116,7 @@ const Packages = ({ onOpenContact }) => {
           
           <div className="quote-cta-content">
             <h3 className="quote-cta-title">
-              ¿No encuentras tu destino soñado? <br />
+              <span className="quote-title-main">¿No encuentras tu destino soñado?</span>
               <span className="quote-title-accent">Cotiza tu viaje aquí</span>
             </h3>
 

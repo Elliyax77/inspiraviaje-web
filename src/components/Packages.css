@@ -295,16 +295,27 @@
 
 .quote-cta-title {
   color: #FFFFFF;
-  font-size: clamp(1.65rem, 4vw, 2.4rem);
   font-weight: 800;
   line-height: 1.25;
   margin-bottom: 0.95rem;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.quote-title-main {
+  display: block;
+  white-space: nowrap;
+  font-size: clamp(0.95rem, 4.3vw, 2.1rem);
+  letter-spacing: -0.2px;
 }
 
 .quote-title-accent {
+  display: block;
   color: var(--color-yellow);
-  display: inline-block;
+  font-size: clamp(1.4rem, 5.5vw, 2.5rem);
 }
 
 .quote-cta-desc {
@@ -383,4 +394,10 @@
 
 .quote-btn-arrow {
   transition: transform 0.25s ease;
+}
+
+@media (max-width: 480px) {
+  .quote-cta-banner {
+    padding: 2.25rem 0.85rem;
+  }
 }
