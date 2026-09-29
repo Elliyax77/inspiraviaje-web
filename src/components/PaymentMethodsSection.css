@@ -1,0 +1,251 @@
+/* ==========================================================================
+   PaymentMethodsSection.css — Métodos de Pago InspiraViaje
+   ========================================================================== */
+
+.payments-section {
+  padding: 4.5rem 0 3.5rem;
+}
+
+.payments-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 3rem;
+}
+
+.payments-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #E0F2FE;
+  border: 1px solid rgba(0, 158, 227, 0.35);
+  padding: 0.35rem 0.95rem;
+  border-radius: var(--radius-full);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--color-blue-dark);
+  margin-bottom: 0.85rem;
+}
+
+.payments-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.3rem);
+  font-weight: 800;
+  color: var(--color-text-main);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.payments-subtitle {
+  font-size: 0.98rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Grilla de Métodos */
+.payments-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 640px) {
+  .payments-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .payments-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.payment-card {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 158, 227, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 10px 25px -6px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.payment-card:hover {
+  border-color: rgba(0, 158, 227, 0.5);
+  box-shadow: 0 16px 35px -8px rgba(0, 158, 227, 0.2);
+}
+
+.payment-card.highlight-cuotas {
+  background: linear-gradient(135deg, #FFFDF5 0%, #FFFFFF 100%);
+  border: 2px solid #FFB800;
+  box-shadow: 0 12px 30px -6px rgba(255, 184, 0, 0.2);
+}
+
+.payment-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.payment-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #E0F2FE;
+  color: var(--color-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlight-cuotas .payment-icon-box {
+  background: #FFFBEB;
+  color: #D97706;
+}
+
+.payment-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-full);
+  background: #F1F5F9;
+  color: #475569;
+}
+
+.highlight-cuotas .payment-badge {
+  background: #FEF3C7;
+  color: #B45309;
+}
+
+.payment-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.payment-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Banner de Cuotas */
+.installment-banner {
+  background: linear-gradient(135deg, #0284C7 0%, #0369A1 50%, #0F172A 100%);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  box-shadow: 0 20px 45px -10px rgba(2, 132, 199, 0.4);
+}
+
+@media (max-width: 900px) {
+  .installment-banner {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+}
+
+.installment-content {
+  flex: 1;
+}
+
+.installment-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 184, 0, 0.25);
+  border: 1px solid #FFB800;
+  color: #FEF08A;
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.installment-title {
+  color: #FFFFFF;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.installment-text {
+  color: #E0F2FE;
+  font-size: 0.96rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 1.25rem;
+}
+
+.installment-perks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .installment-perks {
+    justify-content: center;
+  }
+}
+
+.perk-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: #BAE6FD;
+  font-weight: 600;
+}
+
+.installment-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.btn-installment-quote {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #FFB800;
+  color: #0F172A;
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  font-weight: 800;
+  padding: 0.95rem 2rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 24px rgba(255, 184, 0, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.btn-installment-quote:hover {
+  background: #FBBF24;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 184, 0, 0.55);
+}
+
+.installment-subnote {
+  font-size: 0.78rem;
+  color: #94A3B8;
+}

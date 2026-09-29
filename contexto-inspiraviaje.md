@@ -55,6 +55,11 @@ inspiraviaje-web/
 │       ├── NavModals.jsx / .css     ← Modales detallados para Información, Full Days, Quiénes Somos, Métodos de Pago y Seguros de Vida & Asistencia
 │       ├── HeroSlider.jsx / .css    ← Slider 16:9 con autoplay, swipe y botón "Más información" (id="promociones")
 │       ├── Packages.jsx / .css      ← Cuadrícula de Paquetes en proporción 3:4 y banner 'Cotiza tu viaje aquí' con botón directo a contacto
+│       ├── FullDaysSection.jsx/.css ← Tours de 1 día (Morrocoy, Isla Larga, Colonia Tovar) en grilla 3 columnas desktop con reserva directa
+│       ├── TripPlanner.jsx / .css   ← Cotizador interactivo en 3 pasos con casilla de privacidad y botón bloqueado hasta aceptar
+│       ├── FeaturesSection.jsx/.css ← Barra de 4 estadísticas (+5 Años, +3200 viajeros, 99.4%, 24/7) y 4 pilares de excelencia turística
+│       ├── PaymentMethodsSection.jsx/.css ← Métodos de pago (Pago Móvil BCV, Zelle, Binance, Divisas, Tarjetas) y banner estrella de cuotas al 30%
+│       ├── FaqSection.jsx / .css    ← Acordeón interactivo de preguntas frecuentes con caja de soporte directo por WhatsApp
 │       ├── ContactModal.jsx / .css  ← Modal interactivo para contacto con checkbox obligatoria de privacidad y botón de WhatsApp bloqueado hasta aceptación
 │       ├── LegalModals.jsx / .css   ← Visor modal accesible de textos legales con navegación por pestañas y botón de impresión
 │       ├── CookieBanner.jsx / .css  ← Banner de cookies equilibrado (Aceptar, Rechazar, Configurar) con bloqueo previo y panel granular
@@ -70,22 +75,28 @@ inspiraviaje-web/
    - Logotipo oficial de InspiraViaje a la izquierda sobre fondo amarillo cálido.
    - A la derecha: Botón de **Contacto** azul directo (visible en pantallas de escritorio y tablets; se oculta en teléfonos móviles para brindar mayor limpieza visual) + **Botón de Menú** circular estilizado en blanco y amarillo sutil.
    - Comportamiento de Scroll estabilizado: Implementa histéresis de desplazamiento (compacta a > 60px y expande a < 15px) junto con `overflow-anchor: none` y `requestAnimationFrame`, previniendo bucles de redimensionamiento y parpadeos en cualquier dispositivo.
-2. **Menú de opciones (Desplegable lateral con 8 secciones):**
-   - **1. Información:** Guía en 3 pasos para reservar y preguntas frecuentes (FAQ).
-   - **2. Paquetes:** Desplazamiento fluido a la sección de paquetes turísticos (3:4).
-   - **3. Full Days:** Tours de 1 día (Morrocoy Cayo Sombrero, Isla Larga, Colonia Tovar) con precios, inclusiones y reserva inmediata.
-   - **4. Promociones:** Desplazamiento fluido al slider de promociones principales.
-   - **5. Quiénes Somos:** Respaldo, trayectoria de más de 5 años, valores y asesoría personalizada.
-   - **6. Métodos de Pago:** Zelle, Pago Móvil (tasa BCV), Efectivo USD, Binance Pay (USDT), Tarjetas Internacionales y Plan de Reserva en Cuotas (desde 30% inicial).
-   - **7. Contacto:** Opción destacada con acceso directo a canales de atención personalizada (WhatsApp, llamadas, correo e Instagram).
-   - **8. Seguros de Vida:** Sección de protección integral que incluye Seguro de Vida y Protección Familiar, Seguro de Viaje & Asistencia Médica Internacional (apto requisitos consulares/Schengen hasta $100k USD) y Póliza de Accidentes Personales, con botón de cotización directa por WhatsApp y asesoría inmediata.
-3. **Hero Slider:** Carrusel dinámico con destinos estelares, rotación automática hacia la derecha y soporte táctil de gestos (swipe). En pantallas de escritorio conserva su formato panorámico **16:9**; en teléfonos celulares se expande con **min-height: 340px (aspect-ratio: 4:3)** para un impacto visual imponente, tipografía de mayor tamaño y subtítulos visibles. Cada slide incluye en la esquina inferior izquierda su botón **"Más información"**.
-4. **Paquetes Turísticos (3:4) y Banner de Cotización:** Sección destacada con 3 tarjetas en formato vertical 3:4 con acabado frosted glass (ideal para visualización en teléfonos móviles) con fotos espectaculares, precio referencial, detalles y su botón **"Más información"** en la parte inferior izquierda. Al final de la sección incluye el banner interactivo **'Cotiza tu viaje aquí'** con información de asesoría a la medida, facilidades de pago en cuotas y botón directo de contacto.
-5. **Footer con Barra Legal Accesible:** Canales de atención (WhatsApp, teléfono, correo), redes sociales, derechos reservados y **Barra de Enlaces Legales Semántica (`.footer-legal-bar`)** con accesos directos a *Aviso Legal*, *Política de Privacidad*, *Política de Cookies*, *Términos de Contratación & Cuotas* y el botón permanente `⚙️ Configurar Cookies` para revocar o alterar consentimientos en cualquier instante.
-6. **Sistema Normativo y Cumplimiento Digital (RGPD / ePrivacy):**
-   - **Banner de Consentimiento de Cookies:** Ofrece 3 botones simétricos y equilibrados (*Aceptar todas*, *Rechazar opcionales*, *Configurar*), bloqueo estricto antes de autorización y centro de preferencias con interruptores para Analíticas y Marketing.
-   - **Visor Modal de Textos Legales (`LegalModals`):** Lectura clara de los 4 cuerpos normativos con selector por pestañas, diseño a juego con la identidad visual de InspiraViaje y botón de impresión a PDF.
-   - **Consentimiento Previo en Contacto (`ContactModal`):** Casilla activa no pre-marcada de aceptación de privacidad. El botón de WhatsApp permanece bloqueado (`disabled`, apariencia inactiva y nota de aviso) hasta que el usuario marque activamente la casilla.
+2. **Hero Slider:** Carrusel dinámico con destinos estelares, rotación automática hacia la derecha y soporte táctil de gestos (swipe). En pantallas de escritorio conserva su formato panorámico **16:9**; en teléfonos celulares se expande con **min-height: 340px (aspect-ratio: 4:3)** para un impacto visual imponente, tipografía de mayor tamaño y subtítulos visibles. Cada slide incluye en la esquina inferior izquierda su botón **"Más información"**.
+3. **Paquetes Turísticos (3:4) y Banner de Cotización:** Sección destacada con 3 tarjetas en formato vertical 3:4 con acabado frosted glass (ideal para visualización en teléfonos móviles) con fotos espectaculares, precio referencial, detalles y su botón **"Más información"** en la parte inferior izquierda. Al final de la sección incluye el banner interactivo **'Cotiza tu viaje aquí'** con información de asesoría a la medida, facilidades de pago en cuotas y botón directo de contacto.
+4. **Full Days & Escapadas Cortas:**
+   - Tours de 1 día (Morrocoy Cayo Sombrero, Isla Larga y Colonia Tovar) con detalles de transporte, lanchas e hidratación en grilla de 3 columnas en computadoras.
+5. **Cotizador Interactivo ("Diseña tu Viaje a la Medida"):**
+   - Selector dinámico en 3 pasos: Destino -> Época -> Pasajeros.
+   - Casilla de verificación de privacidad obligatoria (no pre-marcada) con enlaces a Política de Privacidad y Términos.
+   - Botón "Solicitar Cotización por WhatsApp" en estado estrictamente deshabilitado hasta marcar la casilla.
+6. **¿Por qué viajar con InspiraViaje?:**
+   - Barra horizontal de 4 estadísticas (+5 Años de trayectoria, +3,200 viajeros, 99.4% opiniones 5 estrellas, 24/7 asistencia).
+   - 4 tarjetas de pilares de servicio (Atención 100% personalizada, Tarifas transparentes, Garantía y confianza, Seguridad y soporte permanente).
+7. **Métodos de Pago & Banner de Cuotas al 30%:**
+   - Métodos de pago admitidos: Pago Móvil a tasa oficial BCV, Zelle en USD, Binance Pay USDT, Efectivo en divisas y Tarjetas internacionales.
+   - Banner destacado "Plan Reserva en Cuotas": congelamiento de tarifa pagando desde el 30% inicial y cuotas quincenales cómodas.
+8. **Preguntas Frecuentes (FAQ):**
+   - Acordeón interactivo con respuestas inmediatas a reservas, anticipación, vuelos y personalización.
+   - Caja de atención lateral para consultas específicas con enlace directo a WhatsApp.
+9. **Footer con Barra Legal Accesible:** Canales de atención (WhatsApp, teléfono, correo), redes sociales, derechos reservados y **Barra de Enlaces Legales Semántica (`.footer-legal-bar`)** con accesos directos a *Aviso Legal*, *Política de Privacidad*, *Política de Cookies*, *Términos de Contratación & Cuotas* y el botón permanente `⚙️ Configurar Cookies` para revocar o alterar consentimientos en cualquier instante.
+10. **Sistema Normativo y Cumplimiento Digital (RGPD / ePrivacy):**
+    - **Banner de Consentimiento de Cookies:** Ofrece 3 botones simétricos y equilibrados (*Aceptar todas*, *Rechazar opcionales*, *Configurar*), bloqueo estricto antes de autorización y centro de preferencias con interruptores para Analíticas y Marketing.
+    - **Visor Modal de Textos Legales (`LegalModals`):** Lectura clara de los 4 cuerpos normativos con selector por pestañas, diseño a juego con la identidad visual de InspiraViaje y botón de impresión a PDF.
+    - **Consentimiento Previo en Contacto (`ContactModal`):** Casilla activa no pre-marcada de aceptación de privacidad. El botón de WhatsApp permanece bloqueado (`disabled`, apariencia inactiva y nota de aviso) hasta que el usuario marque activamente la casilla.
 
 ---
 

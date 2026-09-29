@@ -5,6 +5,11 @@ import Packages from './components/Packages';
 import ContactModal from './components/ContactModal';
 import NavDrawer from './components/NavDrawer';
 import NavModals from './components/NavModals';
+import FullDaysSection from './components/FullDaysSection';
+import TripPlanner from './components/TripPlanner';
+import FeaturesSection from './components/FeaturesSection';
+import PaymentMethodsSection from './components/PaymentMethodsSection';
+import FaqSection from './components/FaqSection';
 import Footer from './components/Footer';
 import LegalModals from './components/LegalModals';
 import CookieBanner from './components/CookieBanner';
@@ -19,21 +24,28 @@ function App() {
   const [activeLegalDoc, setActiveLegalDoc] = useState(null); // 'avisoLegal' | 'privacidad' | 'cookies' | 'terminos' | null
   const [cookieSettingsOpen, setCookieSettingsOpen] = useState(false);
 
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleSelectMenuItem = (id) => {
     if (id === 'paquetes') {
-      const el = document.getElementById('paquetes');
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
+      scrollToSection('paquetes');
+    } else if (id === 'full-days') {
+      scrollToSection('full-days');
     } else if (id === 'promociones') {
-      const el = document.getElementById('promociones');
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
+      scrollToSection('promociones');
+    } else if (id === 'metodos-pago') {
+      scrollToSection('metodos-pago');
+    } else if (id === 'quienes-somos') {
+      scrollToSection('quienes-somos');
     } else if (id === 'contacto') {
       setContactOpen(true);
     } else {
-      // informacion, full-days, quienes-somos, metodos-pago
+      // informacion, seguros, etc.
       setActiveModal(id);
     }
   };
@@ -50,11 +62,26 @@ function App() {
         {/* 2. Slider Principal en proporción 16:9 con rotación a la derecha y botón Más Información */}
         <HeroSlider onOpenContact={() => setContactOpen(true)} />
 
-        {/* 3. Sección Paquetes Turísticos con 3 imágenes en proporción 3:4 y botón Más Información */}
+        {/* 3. Sección Paquetes Turísticos con 3 imágenes en proporción 3:4 y banner de asesoría */}
         <Packages onOpenContact={() => setContactOpen(true)} />
+
+        {/* 4. Sección de Full Days & Escapadas Cortas de 1 día */}
+        <FullDaysSection onOpenContact={() => setContactOpen(true)} />
+
+        {/* 5. Cotizador Interactivo: Diseña tu Viaje a la Medida (con validación de privacidad) */}
+        <TripPlanner onOpenLegal={(docKey) => setActiveLegalDoc(docKey)} />
+
+        {/* 6. Por qué viajar con InspiraViaje (Estadísticas y 4 pilares) */}
+        <FeaturesSection />
+
+        {/* 7. Métodos de Pago Transparentes & Plan de Cuotas desde 30% */}
+        <PaymentMethodsSection onOpenContact={() => setContactOpen(true)} />
+
+        {/* 8. Preguntas Frecuentes Interactivas (Acordeón + Soporte Directo) */}
+        <FaqSection onOpenContact={() => setContactOpen(true)} />
       </main>
 
-      {/* 4. Footer con canales de atención, copyright y barra legal accesible */}
+      {/* 9. Footer con canales de atención, copyright y barra legal accesible */}
       <Footer 
         onOpenContact={() => setContactOpen(true)}
         onOpenLegal={(docKey) => setActiveLegalDoc(docKey)}
