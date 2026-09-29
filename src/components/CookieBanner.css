@@ -342,3 +342,20 @@ input:checked + .switch-slider:before {
     width: 100%;
   }
 }
+
+@media (max-width: 640px) {
+  .cookie-banner-card {
+    padding: 1.1rem 1rem;
+    border-radius: 14px;
+  }
+
+  .settings-footer-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .settings-footer-actions .btn-cookie {
+    width: 100%;
+  }
+}
+

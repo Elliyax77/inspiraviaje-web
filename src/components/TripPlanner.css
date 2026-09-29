@@ -262,3 +262,34 @@
   color: var(--color-text-muted);
   text-align: center;
 }
+
+@media (max-width: 640px) {
+  .planner-card {
+    padding: 1.5rem 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .options-grid {
+    gap: 0.5rem;
+  }
+
+  .option-pill {
+    padding: 0.6rem 0.95rem;
+    font-size: 0.82rem;
+  }
+
+  .btn-planner-send {
+    padding: 0.9rem 1.25rem;
+    font-size: 0.96rem;
+    width: 100%;
+  }
+
+  .planner-consent-wrapper {
+    padding: 0.85rem 0.75rem;
+  }
+
+  .consent-error-msg {
+    padding-left: 0;
+  }
+}
+

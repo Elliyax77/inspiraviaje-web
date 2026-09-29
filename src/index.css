@@ -53,6 +53,9 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 body {
@@ -60,6 +63,9 @@ body {
   color: var(--color-text-main);
   line-height: 1.5;
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
   -webkit-font-smoothing: antialiased;
   background-color: #BAE6FD;
   background-image: radial-gradient(ellipse 85% 70% at 50% 45%, #E0F4FE 0%, #BAE6FD 45%, #7DD3FC 85%, #50C0F8 100%);

@@ -70,6 +70,65 @@
   font-weight: 600;
 }
 
+/* Adaptación específica para Celulares */
+@media (max-width: 640px) {
+  .features-section {
+    padding: 3rem 0 2rem;
+  }
+
+  .stats-strip {
+    gap: 0.65rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .stat-card {
+    padding: 1rem 0.65rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .stat-icon-box {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+
+  .stat-info {
+    align-items: center;
+  }
+
+  .stat-number {
+    font-size: 1.35rem;
+  }
+
+  .stat-label {
+    font-size: 0.74rem;
+    line-height: 1.25;
+  }
+
+  .features-header {
+    margin-bottom: 2rem;
+  }
+
+  .features-title {
+    font-size: 1.55rem;
+  }
+
+  .features-subtitle {
+    font-size: 0.88rem;
+  }
+
+  .features-grid {
+    gap: 1.15rem;
+  }
+
+  .feature-card {
+    padding: 1.4rem 1.15rem;
+  }
+}
+
 /* Features Header */
 .features-header {
   text-align: center;

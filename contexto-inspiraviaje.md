@@ -108,5 +108,9 @@ inspiraviaje-web/
   - Tarjetas de Paquetes: **3:4** estricto (`aspect-ratio: 3 / 4`).
 - **Ubicación del botón de acción en las imágenes:** Siempre en la **parte inferior izquierda**.
 - **Máxima optimización para teléfonos móviles:** botones táctiles generosos (mínimo 44px de altura), tipografías legibles y soporte para arrastrar/swipe.
+- **Bloqueo estricto de desplazamiento horizontal en celulares:** La página aplica `overflow-x: hidden` en `html` y `body`, y `overflow-x: clip` en contenedores maestros. Queda estrictamente prohibido cualquier desbordamiento lateral: la navegación en teléfonos móviles es exclusivamente vertical (arriba y abajo).
+- **Tarjetas de estadísticas adaptativas:** En pantallas móviles (< 640px), las 4 tarjetas de estadísticas (`+5 Años`, `+3,200 Viajeros`, `99.4%`, `24/7`) se organizan en formato vertical centrado (ícono arriba, cifra grande y etiqueta compacta abajo) para ajustarse con elegancia y holgura en pantallas de 360px a 430px sin ensanchar la cuadrícula.
+- **Preservación intacta del diseño de computadora:** Cualquier ajuste, media query o regla de adaptación para celulares debe restringirse a `@media (max-width: ...)` sin modificar bajo ninguna circunstancia el diseño o dimensiones de la versión de escritorio (`@media (min-width: 1024px)`).
 - **No usar Tailwind CSS** (Vanilla CSS puro y modular).
 - **Cumplimiento legal estricto:** Ninguna casilla de consentimiento puede estar pre-marcada. Las opciones de cookies deben ser equilibradas sin *dark patterns*. La configuración de cookies debe ser accesible permanentemente desde el pie de página.
+
