@@ -1,0 +1,344 @@
+/* ==========================================================================
+   CookieBanner.css — Banner de Consentimiento de Cookies de InspiraViaje
+   ========================================================================== */
+
+.cookie-banner-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99990;
+  padding: 1rem 0;
+  pointer-events: none;
+}
+
+.cookie-banner-container .container {
+  pointer-events: auto;
+}
+
+.cookie-banner-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 158, 227, 0.25);
+  border-radius: 18px;
+  box-shadow: 0 16px 45px -8px rgba(15, 23, 42, 0.28);
+  padding: 1.4rem 1.75rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Vista Principal */
+.cookie-main-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.75rem;
+}
+
+.cookie-text-col {
+  flex: 1;
+}
+
+.cookie-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.45rem;
+}
+
+.cookie-icon-wrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #E0F2FE;
+  color: #009EE3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cookie-badge-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.cookie-description {
+  margin: 0;
+  font-size: 0.84rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.cookie-inline-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #009EE3;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.cookie-inline-link:hover {
+  color: #0284C7;
+}
+
+/* Grupo de Botones Simétricos */
+.cookie-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.btn-cookie {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.btn-cookie.btn-accept {
+  background: #009EE3;
+  color: #FFFFFF;
+  border: 1px solid #009EE3;
+  box-shadow: 0 4px 12px rgba(0, 158, 227, 0.3);
+}
+
+.btn-cookie.btn-accept:hover {
+  background: #0284C7;
+  border-color: #0284C7;
+  transform: translateY(-1px);
+}
+
+.btn-cookie.btn-reject {
+  background: #FFFFFF;
+  color: #475569;
+  border: 1px solid #CBD5E1;
+}
+
+.btn-cookie.btn-reject:hover {
+  background: #F8FAFC;
+  border-color: #94A3B8;
+  color: #0F172A;
+}
+
+.btn-cookie.btn-settings {
+  background: #F8FAFC;
+  color: #0F172A;
+  border: 1px solid #E2E8F0;
+}
+
+.btn-cookie.btn-settings:hover {
+  background: #F1F5F9;
+  border-color: #CBD5E1;
+}
+
+/* Panel Granular */
+.cookie-settings-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.settings-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #F1F5F9;
+  padding-bottom: 0.75rem;
+}
+
+.settings-header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.settings-header-title h4 {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.settings-back-btn {
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  color: #334155;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.settings-back-btn:hover {
+  background: #E2E8F0;
+  color: #0F172A;
+}
+
+.settings-panel-desc {
+  margin: 0;
+  font-size: 0.84rem;
+  color: #64748B;
+  line-height: 1.5;
+}
+
+.cookie-categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.cookie-category-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  gap: 1rem;
+}
+
+.category-info {
+  flex: 1;
+}
+
+.category-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.35rem;
+}
+
+.category-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.category-status-locked {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #E0F2FE;
+  color: #0369A1;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.category-status-optional {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #FEF3C7;
+  color: #92400E;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.category-desc {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #64748B;
+  line-height: 1.45;
+}
+
+/* Switch UI */
+.switch-label {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.switch-label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #CBD5E1;
+  transition: .3s;
+  border-radius: 24px;
+}
+
+.switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .3s;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+input:checked + .switch-slider {
+  background-color: #009EE3;
+}
+
+input:checked + .switch-slider:before {
+  transform: translateX(20px);
+}
+
+.settings-footer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  border-top: 1px solid #F1F5F9;
+  padding-top: 0.75rem;
+}
+
+.btn-save-custom {
+  background: #009EE3;
+  color: #FFFFFF;
+  border: 1px solid #009EE3;
+}
+
+.btn-save-custom:hover {
+  background: #0284C7;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cookie-main-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .cookie-actions-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-cookie {
+    width: 100%;
+  }
+}

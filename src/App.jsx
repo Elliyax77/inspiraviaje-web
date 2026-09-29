@@ -6,12 +6,18 @@ import ContactModal from './components/ContactModal';
 import NavDrawer from './components/NavDrawer';
 import NavModals from './components/NavModals';
 import Footer from './components/Footer';
+import LegalModals from './components/LegalModals';
+import CookieBanner from './components/CookieBanner';
 import './App.css';
 
 function App() {
   const [contactOpen, setContactOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeModal, setActiveModal] = useState(null); // 'informacion' | 'full-days' | 'quienes-somos' | 'metodos-pago' | null
+
+  // Estados de cumplimiento legal normativo
+  const [activeLegalDoc, setActiveLegalDoc] = useState(null); // 'avisoLegal' | 'privacidad' | 'cookies' | 'terminos' | null
+  const [cookieSettingsOpen, setCookieSettingsOpen] = useState(false);
 
   const handleSelectMenuItem = (id) => {
     if (id === 'paquetes') {
@@ -48,11 +54,19 @@ function App() {
         <Packages onOpenContact={() => setContactOpen(true)} />
       </main>
 
-      {/* 4. Footer con canales de atención y copyright */}
-      <Footer onOpenContact={() => setContactOpen(true)} />
+      {/* 4. Footer con canales de atención, copyright y barra legal accesible */}
+      <Footer 
+        onOpenContact={() => setContactOpen(true)}
+        onOpenLegal={(docKey) => setActiveLegalDoc(docKey)}
+        onOpenCookieSettings={() => setCookieSettingsOpen(true)}
+      />
 
-      {/* 5. Modal / Drawer para Contacto Inmediato */}
-      <ContactModal isOpen={contactOpen} onClose={() => setContactOpen(false)} />
+      {/* 5. Modal / Drawer para Contacto Inmediato (con consentimiento de privacidad previo) */}
+      <ContactModal 
+        isOpen={contactOpen} 
+        onClose={() => setContactOpen(false)}
+        onOpenLegal={(docKey) => setActiveLegalDoc(docKey)}
+      />
 
       {/* 6. Menú Desplegable de las 3 rayitas con las 6 opciones */}
       <NavDrawer 
@@ -65,6 +79,20 @@ function App() {
       <NavModals 
         activeModal={activeModal} 
         onClose={() => setActiveModal(null)} 
+      />
+
+      {/* 8. Modales Legales y Normativos (Aviso Legal, Privacidad, Cookies, Términos) */}
+      <LegalModals 
+        activeLegalDoc={activeLegalDoc}
+        onClose={() => setActiveLegalDoc(null)}
+        onSwitchDoc={(docKey) => setActiveLegalDoc(docKey)}
+      />
+
+      {/* 9. Banner de Consentimiento de Cookies (RGPD / ePrivacy con bloqueo previo) */}
+      <CookieBanner 
+        onOpenLegal={(docKey) => setActiveLegalDoc(docKey)}
+        forceOpenSettings={cookieSettingsOpen}
+        onCloseSettings={() => setCookieSettingsOpen(false)}
       />
     </div>
   );

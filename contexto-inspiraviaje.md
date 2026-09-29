@@ -43,19 +43,22 @@ inspiraviaje-web/
 │   ├── favicon.ico          ← Favicon formato ICO para navegadores
 │   └── apple-touch-icon.png ← Ícono de alta resolución para móviles y marcadores
 ├── src/
-│   ├── App.jsx              ← Ensamblador principal de la web
+│   ├── App.jsx              ← Ensamblador principal de la web y control de modales
 │   ├── App.css              ← Estilos del contenedor general (fondo transparente)
 │   ├── index.css            ← Variables globales, tokens de Header amarillo-blanco, utilidades
 │   ├── data/
-│   │   └── travelData.js    ← Base de datos local (slides, paquetes, full days, métodos de pago, quiénes somos, FAQ)
+│   │   ├── travelData.js    ← Base de datos local (slides, paquetes, full days, métodos de pago, quiénes somos, FAQ)
+│   │   └── legalContent.js  ← Redacción jurídica oficial (Aviso Legal, Privacidad RGPD/ARCO, Cookies, Términos y Cuotas)
 │   └── components/
 │       ├── Header.jsx / .css        ← Encabezado sólido en degradado amarillo a blanco con logo, botón de contacto (oculto en móviles) y botón de Menú circular a juego
 │       ├── NavDrawer.jsx / .css     ← Panel lateral desplegable con las 8 opciones de navegación (incluye Contacto y Seguros de Vida)
 │       ├── NavModals.jsx / .css     ← Modales detallados para Información, Full Days, Quiénes Somos, Métodos de Pago y Seguros de Vida & Asistencia
 │       ├── HeroSlider.jsx / .css    ← Slider 16:9 con autoplay, swipe y botón "Más información" (id="promociones")
 │       ├── Packages.jsx / .css      ← Cuadrícula de Paquetes en proporción 3:4 y banner 'Cotiza tu viaje aquí' con botón directo a contacto
-│       ├── ContactModal.jsx / .css  ← Modal interactivo para contacto inmediato por WhatsApp
-│       └── Footer.jsx / .css        ← Pie de página en modo frosted glass con redes, información y soporte
+│       ├── ContactModal.jsx / .css  ← Modal interactivo para contacto con checkbox obligatoria de privacidad y botón de WhatsApp bloqueado hasta aceptación
+│       ├── LegalModals.jsx / .css   ← Visor modal accesible de textos legales con navegación por pestañas y botón de impresión
+│       ├── CookieBanner.jsx / .css  ← Banner de cookies equilibrado (Aceptar, Rechazar, Configurar) con bloqueo previo y panel granular
+│       └── Footer.jsx / .css        ← Pie de página frosted glass con redes, información y barra accesible de enlaces legales
 └── contexto-inspiraviaje.md         ← Documento de contexto y reglas del proyecto
 ```
 
@@ -78,7 +81,11 @@ inspiraviaje-web/
    - **8. Seguros de Vida:** Sección de protección integral que incluye Seguro de Vida y Protección Familiar, Seguro de Viaje & Asistencia Médica Internacional (apto requisitos consulares/Schengen hasta $100k USD) y Póliza de Accidentes Personales, con botón de cotización directa por WhatsApp y asesoría inmediata.
 3. **Hero Slider:** Carrusel dinámico con destinos estelares, rotación automática hacia la derecha y soporte táctil de gestos (swipe). En pantallas de escritorio conserva su formato panorámico **16:9**; en teléfonos celulares se expande con **min-height: 340px (aspect-ratio: 4:3)** para un impacto visual imponente, tipografía de mayor tamaño y subtítulos visibles. Cada slide incluye en la esquina inferior izquierda su botón **"Más información"**.
 4. **Paquetes Turísticos (3:4) y Banner de Cotización:** Sección destacada con 3 tarjetas en formato vertical 3:4 con acabado frosted glass (ideal para visualización en teléfonos móviles) con fotos espectaculares, precio referencial, detalles y su botón **"Más información"** en la parte inferior izquierda. Al final de la sección incluye el banner interactivo **'Cotiza tu viaje aquí'** con información de asesoría a la medida, facilidades de pago en cuotas y botón directo de contacto.
-5. **Footer:** Canales de atención (WhatsApp, teléfono, correo), redes sociales y derechos reservados sobre un contenedor esmerilado elegante.
+5. **Footer con Barra Legal Accesible:** Canales de atención (WhatsApp, teléfono, correo), redes sociales, derechos reservados y **Barra de Enlaces Legales Semántica (`.footer-legal-bar`)** con accesos directos a *Aviso Legal*, *Política de Privacidad*, *Política de Cookies*, *Términos de Contratación & Cuotas* y el botón permanente `⚙️ Configurar Cookies` para revocar o alterar consentimientos en cualquier instante.
+6. **Sistema Normativo y Cumplimiento Digital (RGPD / ePrivacy):**
+   - **Banner de Consentimiento de Cookies:** Ofrece 3 botones simétricos y equilibrados (*Aceptar todas*, *Rechazar opcionales*, *Configurar*), bloqueo estricto antes de autorización y centro de preferencias con interruptores para Analíticas y Marketing.
+   - **Visor Modal de Textos Legales (`LegalModals`):** Lectura clara de los 4 cuerpos normativos con selector por pestañas, diseño a juego con la identidad visual de InspiraViaje y botón de impresión a PDF.
+   - **Consentimiento Previo en Contacto (`ContactModal`):** Casilla activa no pre-marcada de aceptación de privacidad. El botón de WhatsApp permanece bloqueado (`disabled`, apariencia inactiva y nota de aviso) hasta que el usuario marque activamente la casilla.
 
 ---
 
@@ -91,3 +98,4 @@ inspiraviaje-web/
 - **Ubicación del botón de acción en las imágenes:** Siempre en la **parte inferior izquierda**.
 - **Máxima optimización para teléfonos móviles:** botones táctiles generosos (mínimo 44px de altura), tipografías legibles y soporte para arrastrar/swipe.
 - **No usar Tailwind CSS** (Vanilla CSS puro y modular).
+- **Cumplimiento legal estricto:** Ninguna casilla de consentimiento puede estar pre-marcada. Las opciones de cookies deben ser equilibradas sin *dark patterns*. La configuración de cookies debe ser accesible permanentemente desde el pie de página.

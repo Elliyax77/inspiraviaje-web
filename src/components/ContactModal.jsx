@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, MessageCircle, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { X, MessageCircle, Phone, Mail, MapPin, Clock, ShieldCheck } from 'lucide-react';
 import { agencyInfo } from '../data/travelData';
 import './ContactModal.css';
 
@@ -12,11 +12,19 @@ const InstagramIcon = ({ size = 20, color = "currentColor" }) => (
   </svg>
 );
 
-const ContactModal = ({ isOpen, onClose }) => {
+const ContactModal = ({ isOpen, onClose, onOpenLegal }) => {
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [showError, setShowError] = useState(false);
+
   if (!isOpen) return null;
 
   const openWhatsApp = () => {
-    const text = encodeURIComponent("¡Hola InspiraViaje! Quisiera información y asesoría sobre paquetes turísticos.");
+    if (!privacyAccepted) {
+      setShowError(true);
+      return;
+    }
+    setShowError(false);
+    const text = encodeURIComponent("¡Hola InspiraViaje! Quisiera información y asesoría sobre paquetes turísticos. (He aceptado la Política de Privacidad en inspiraviaje.com)");
     window.open(`https://wa.me/${agencyInfo.whatsappNumber}?text=${text}`, '_blank');
   };
 
@@ -53,19 +61,69 @@ const ContactModal = ({ isOpen, onClose }) => {
             Nuestros asesores turísticos están disponibles para planificar cada detalle de tus vacaciones soñadas.
           </p>
 
-          <div className="contact-channels">
-            {/* Opción WhatsApp */}
+          {/* Casilla obligatoria de privacidad RGPD (No pre-marcada) */}
+          <div className="contact-consent-box">
+            <label className={`contact-consent-label ${showError && !privacyAccepted ? 'error' : ''}`}>
+              <input
+                type="checkbox"
+                id="inspiraviaje-privacy-check"
+                checked={privacyAccepted}
+                onChange={(e) => {
+                  setPrivacyAccepted(e.target.checked);
+                  if (e.target.checked) setShowError(false);
+                }}
+                className="contact-checkbox"
+                required
+              />
+              <span className="contact-consent-text">
+                He leído y acepto la{' '}
+                <button
+                  type="button"
+                  className="legal-inline-link"
+                  onClick={() => onOpenLegal && onOpenLegal('privacidad')}
+                >
+                  Política de Privacidad
+                </button>{' '}
+                y los{' '}
+                <button
+                  type="button"
+                  className="legal-inline-link"
+                  onClick={() => onOpenLegal && onOpenLegal('terminos')}
+                >
+                  Términos de Contratación
+                </button>.
+              </span>
+            </label>
+            {showError && !privacyAccepted && (
+              <p className="contact-error-msg" role="alert">
+                ⚠️ Debes marcar la casilla para habilitar el chat por WhatsApp.
+              </p>
+            )}
+          </div>
+
+          <div 
+            className="contact-channels"
+            onClick={() => {
+              if (!privacyAccepted) setShowError(true);
+            }}
+          >
+            {/* Opción WhatsApp (Deshabilitado mientras no se acepte) */}
             <button 
               type="button"
               onClick={openWhatsApp}
-              className="channel-card whatsapp-channel"
+              disabled={!privacyAccepted}
+              aria-disabled={!privacyAccepted}
+              className={`channel-card whatsapp-channel ${!privacyAccepted ? 'is-disabled' : ''}`}
+              title={!privacyAccepted ? "Marca la casilla de arriba para habilitar WhatsApp" : "Chatear por WhatsApp"}
             >
               <div className="channel-icon-circle whatsapp-bg">
                 <MessageCircle size={22} color="#FFFFFF" />
               </div>
               <div className="channel-info">
                 <span className="channel-name">Chatear por WhatsApp</span>
-                <span className="channel-sub">Respuesta inmediata en minutos</span>
+                <span className="channel-sub">
+                  {!privacyAccepted ? "🔒 Bloqueado hasta aceptar política arriba" : "Respuesta inmediata en minutos"}
+                </span>
               </div>
             </button>
 

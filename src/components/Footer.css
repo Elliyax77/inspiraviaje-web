@@ -135,3 +135,64 @@
   color: var(--color-blue);
   background-color: var(--color-blue-light);
 }
+
+/* ==========================================================================
+   Cumplimiento Legal y Normativo: Barra de Enlaces en Footer
+   ========================================================================== */
+.footer-legal-bar {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid rgba(0, 158, 227, 0.15);
+  border-bottom: 1px solid rgba(0, 158, 227, 0.15);
+}
+
+.legal-links-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-legal-link {
+  background: none;
+  border: none;
+  padding: 4px 6px;
+  color: #64748B;
+  font-size: 0.82rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-legal-link:hover {
+  color: var(--color-blue);
+}
+
+.legal-sep {
+  color: #CBD5E1;
+  font-size: 0.75rem;
+  user-select: none;
+}
+
+.cookie-config-trigger {
+  color: #D97706;
+  font-weight: 700;
+  text-decoration: none;
+  background: #FEF3C7;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.cookie-config-trigger:hover {
+  background: #FDE68A;
+  color: #B45309;
+}

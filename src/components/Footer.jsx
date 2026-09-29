@@ -3,7 +3,7 @@ import { MessageCircle, Heart, ArrowUp } from 'lucide-react';
 import { agencyInfo } from '../data/travelData';
 import './Footer.css';
 
-const Footer = ({ onOpenContact }) => {
+const Footer = ({ onOpenContact, onOpenLegal, onOpenCookieSettings }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -47,7 +47,7 @@ const Footer = ({ onOpenContact }) => {
             </p>
             <button 
               type="button" 
-              onClick={openWhatsApp}
+              onClick={onOpenContact}
               className="btn-whatsapp-footer"
             >
               <MessageCircle size={18} />
@@ -55,6 +55,61 @@ const Footer = ({ onOpenContact }) => {
             </button>
           </div>
         </div>
+
+        {/* Barra accesible de enlaces legales y cumplimiento normativo */}
+        <nav className="footer-legal-bar" aria-label="Enlaces Legales y Normativos">
+          <ul className="legal-links-list">
+            <li>
+              <button 
+                type="button" 
+                className="footer-legal-link" 
+                onClick={() => onOpenLegal && onOpenLegal('avisoLegal')}
+              >
+                Aviso Legal
+              </button>
+            </li>
+            <li className="legal-sep" aria-hidden="true">•</li>
+            <li>
+              <button 
+                type="button" 
+                className="footer-legal-link" 
+                onClick={() => onOpenLegal && onOpenLegal('privacidad')}
+              >
+                Política de Privacidad
+              </button>
+            </li>
+            <li className="legal-sep" aria-hidden="true">•</li>
+            <li>
+              <button 
+                type="button" 
+                className="footer-legal-link" 
+                onClick={() => onOpenLegal && onOpenLegal('cookies')}
+              >
+                Política de Cookies
+              </button>
+            </li>
+            <li className="legal-sep" aria-hidden="true">•</li>
+            <li>
+              <button 
+                type="button" 
+                className="footer-legal-link" 
+                onClick={() => onOpenLegal && onOpenLegal('terminos')}
+              >
+                Términos de Contratación & Cuotas
+              </button>
+            </li>
+            <li className="legal-sep" aria-hidden="true">•</li>
+            <li>
+              <button 
+                type="button" 
+                className="footer-legal-link cookie-config-trigger" 
+                onClick={onOpenCookieSettings}
+              >
+                ⚙️ Configurar Cookies
+              </button>
+            </li>
+          </ul>
+        </nav>
 
         {/* Barra inferior */}
         <div className="footer-bottom-bar">
