@@ -7,10 +7,30 @@ const Header = ({ onOpenContact, onOpenMenu }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentY = window.scrollY;
+          setScrolled((prev) => {
+            // Histéresis para evitar parpadeo y rebote (layout loop) en el punto de cambio:
+            // - Para compactar: requiere scroll mayor a 60px.
+            // - Para expandir: requiere scroll menor a 15px (volver arriba).
+            if (!prev && currentY > 60) return true;
+            if (prev && currentY < 15) return false;
+            return prev;
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Verificación inicial
+    handleScroll();
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

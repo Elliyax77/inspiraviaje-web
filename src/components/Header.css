@@ -4,10 +4,12 @@
   left: 0;
   width: 100%;
   z-index: 100;
+  overflow-anchor: none;
+  transform: translateZ(0);
   background: var(--header-yellow-white-bg);
   border-bottom: 1px solid var(--header-border);
   box-shadow: var(--header-shadow);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   padding: 0.65rem 0;
 }
 

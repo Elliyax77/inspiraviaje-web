@@ -66,6 +66,7 @@ inspiraviaje-web/
    - Diseño sólido en degradado cálido de amarillo suave a blanco puro (`#FEE685` / `#FEF08A` a `#FFFFFF`), sin transparencias ni desenfoque para evitar tintes verdosos.
    - Logotipo oficial de InspiraViaje a la izquierda sobre fondo amarillo cálido.
    - A la derecha: Botón de **Contacto** azul directo (visible en pantallas de escritorio y tablets; se oculta en teléfonos móviles para brindar mayor limpieza visual) + **Botón de Menú** circular estilizado en blanco y amarillo sutil.
+   - Comportamiento de Scroll estabilizado: Implementa histéresis de desplazamiento (compacta a > 60px y expande a < 15px) junto con `overflow-anchor: none` y `requestAnimationFrame`, previniendo bucles de redimensionamiento y parpadeos en cualquier dispositivo.
 2. **Menú de opciones (Desplegable lateral con 8 secciones):**
    - **1. Información:** Guía en 3 pasos para reservar y preguntas frecuentes (FAQ).
    - **2. Paquetes:** Desplazamiento fluido a la sección de paquetes turísticos (3:4).
